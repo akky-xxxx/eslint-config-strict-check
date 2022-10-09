@@ -4,12 +4,12 @@ export = {
   plugins: ["@typescript-eslint", "jest", "tsdoc", "unicorn"],
 
   extends: [
-    "eslint:recommended",
-    "plugin:unicorn/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/recommended",
     "plugin:jest/style",
+    "plugin:unicorn/recommended",
+    "eslint:recommended",
     "airbnb-base",
     "prettier",
     ...[
