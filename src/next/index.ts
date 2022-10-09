@@ -1,7 +1,14 @@
 import path from "path"
 
 export = {
-  plugins: ["@typescript-eslint", "jest", "storybook", "tsdoc", "unicorn"],
+  plugins: [
+    "@typescript-eslint",
+    "jest",
+    "storybook",
+    "strict-check",
+    "tsdoc",
+    "unicorn",
+  ],
 
   extends: [
     "eslint:recommended",
@@ -15,6 +22,7 @@ export = {
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:strict-check/react",
     "airbnb",
     "airbnb/hooks",
     "next/core-web-vitals",
