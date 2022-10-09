@@ -1,7 +1,7 @@
 import path from "path"
 
 export = {
-  plugins: ["@typescript-eslint", "jest", "storybook", "tsdoc", "unicorn"],
+  plugins: ["@typescript-eslint", "jest", "tsdoc", "unicorn"],
 
   extends: [
     "eslint:recommended",
@@ -10,13 +10,12 @@ export = {
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "airbnb",
+    "airbnb-base",
     "prettier",
     ...[
       "../shared/config/import",
       "../shared/config/jest",
       "../shared/config/tsdoc",
-      "../shared/config/jsx-a11y",
       "../shared/config/unicorn",
       "../shared/config/javascript",
       "../shared/config/typescript",
