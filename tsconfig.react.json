@@ -1,0 +1,14 @@
+{
+  "extends": "./config/tsconfig/tsconfig.client.json",
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "./dry-run/**/*.ts",
+    "./dry-run/**/*.tsx"
+  ],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "jsx": "preserve"
+  }
+}
