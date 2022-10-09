@@ -1,6 +1,7 @@
 /* eslint-disable complexity, no-console */
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { Fragment } from "react"
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/consistent-type-imports, @typescript-eslint/ban-ts-comment */
+// @ts-ignore
+import React, { Fragment } from "react"
 
 import type { FC, ReactNode } from "react"
 
@@ -19,11 +20,18 @@ type ReactTest1Props = {
 
 export const ReactTest1: FC<ReactTest1Props> = (props) => {
   const { bool, count, empty, title } = props
+
+  // eslint-disable-next-line strict-check/event-handler-prefix, strict-check/individual-import, unicorn/consistent-function-scoping
+  const onClick: React.EventHandler<unknown> = () => {
+    console.log("onClick")
+  }
+
   return (
     // eslint-disable-next-line react/jsx-fragments
     <>
       <div>1</div>
       <div>2</div>
+      <button type="button" onClick={onClick}>click</button>
       {/* eslint-disable-next-line react/iframe-missing-sandbox */}
       <iframe
         src="https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/iframe-missing-sandbox.md"
