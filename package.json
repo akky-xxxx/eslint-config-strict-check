@@ -34,7 +34,7 @@
     "lint": "run-p lint:* -c",
     "lint-ts-by-eslint": "eslint \"./{src,spec}/**/*.{ts,tsx}\"",
     "lint-ts-by-prettier": "prettier \"./{src,spec}/**/*.{ts,tsx}\" --check",
-    "lint:configs": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --check",
+    "lint:config": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --check",
     "lint:editorconfig": "editorconfig-checker",
     "lint:pack": "fixpack --dryRun",
     "lint:ts": "run-s lint-ts-by-eslint lint-ts-by-prettier",
