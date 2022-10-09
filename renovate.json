@@ -10,11 +10,5 @@
   "minor": {
     "groupName": "all dependencies",
     "automerge": true
-  },
-  "packageRules": [
-    {
-      "packagePatterns": ["eslint"],
-      "automerge": false
-    }
-  ]
+  }
 }
