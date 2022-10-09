@@ -83,6 +83,7 @@
   "peerDependencies": {
     "eslint": "^8.23.1",
     "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-next": "^12.3.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jest": "^27.0.4",
@@ -93,6 +94,12 @@
     "eslint-plugin-unicorn": "^43.0.2"
   },
   "peerDependenciesMeta": {
+    "eslint-config-airbnb": {
+      "optional": true
+    },
+    "eslint-config-airbnb-base": {
+      "optional": true
+    },
     "eslint-config-next": {
       "optional": true
     },
