@@ -12,7 +12,7 @@ on:
       - 'scripts/**'
 
 jobs:
-  check:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,14 +28,66 @@ jobs:
       - name: Run lint
         run: yarn lint
 
+  dry-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
       - name: Run dry-run
         run: yarn dry-run
+
+  spell-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
 
       - name: Run spell-check
         run: yarn spell-check
 
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+
       - name: Run type-check
         run: yarn type-check
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: ./.node-version
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
 
       - name: Run test
         run: yarn test
