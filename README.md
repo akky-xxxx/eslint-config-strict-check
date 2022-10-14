@@ -2,6 +2,12 @@
 - Strict config for eslint.
 
 ## How to use
+### Installation
+
+```shell
+$ yarn add -D eslint-config-strick-check
+```
+
 ### Each to use
 #### Use for TypeScript
 
