@@ -28,7 +28,9 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": Off,
     "@typescript-eslint/no-confusing-void-expression":
       noConfusingVoidExpression,
+    "@typescript-eslint/no-floating-promises": Warn,
     "@typescript-eslint/no-implicit-any-catch": no_implicit_any_catch,
+    "@typescript-eslint/no-misused-promises": Warn,
     "@typescript-eslint/no-unnecessary-boolean-literal-compare":
       noUnnecessaryBooleanLiteralCompare,
     "@typescript-eslint/no-unnecessary-condition": noUnnecessaryCondition,
