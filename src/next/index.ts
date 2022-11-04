@@ -1,19 +1,15 @@
 import path from "path"
 
+import { Extends } from "../shared/const/Extends"
 import { Plugins } from "../shared/const/Plugins"
 
 export = {
   plugins: [...Plugins, "storybook", "strict-check"],
 
   extends: [
-    "eslint:recommended",
+    ...Extends,
     "plugin:storybook/addon-interactions",
     "plugin:storybook/recommended",
-    "plugin:unicorn/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jest/recommended",
-    "plugin:jest/style",
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
