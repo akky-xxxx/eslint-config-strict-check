@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const consistentTestIt = [
-  Error,
+  Severity.ERROR,
   {
     fn: "it",
     withinDescribe: "it",

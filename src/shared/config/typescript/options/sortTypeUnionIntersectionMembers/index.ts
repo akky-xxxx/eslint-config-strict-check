@@ -1,6 +1,6 @@
-import { Warn } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const sortTypeUnionIntersectionMembers = [
-  Warn,
+  Severity.WARN,
   { checkIntersections: true },
 ]

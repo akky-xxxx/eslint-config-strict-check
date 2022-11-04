@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const anchorIsValid = [
-  Error,
+  Severity.ERROR,
   {
     aspects: ["invalidHref", "preferButton"],
     components: ["Link"],

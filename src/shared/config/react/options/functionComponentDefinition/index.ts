@@ -1,6 +1,6 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const functionComponentDefinition = [
-  Error,
+  Severity.ERROR,
   { namedComponents: "arrow-function" },
 ]

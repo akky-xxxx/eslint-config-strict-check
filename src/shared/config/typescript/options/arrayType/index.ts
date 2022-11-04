@@ -1,3 +1,3 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
-export const arrayType = [Error, { default: "array" }]
+export const arrayType = [Severity.ERROR, { default: "array" }]

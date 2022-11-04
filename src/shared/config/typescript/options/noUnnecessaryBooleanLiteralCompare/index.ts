@@ -1,7 +1,7 @@
-import { Warn } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const noUnnecessaryBooleanLiteralCompare = [
-  Warn,
+  Severity.WARN,
   {
     allowComparingNullableBooleansToFalse: false,
     allowComparingNullableBooleansToTrue: false,

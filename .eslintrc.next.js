@@ -1,3 +1,5 @@
+const { Off } = require("./config/eslint/const")
+
 module.exports = {
   root: true,
   parserOptions: {
@@ -7,4 +9,9 @@ module.exports = {
   extends: ["./out/next"],
   ignorePatterns: ["**/libs/**/*", "**/coverage/**", "**/out/**"],
   reportUnusedDisableDirectives: true,
+
+  rules: {
+    // turn off for the dry-run
+    "@next/next/no-html-link-for-pages": Off,
+  },
 }

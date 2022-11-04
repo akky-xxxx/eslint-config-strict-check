@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const preventAbbreviations = [
-  Error,
+  Severity.ERROR,
   {
     replacements: Object.fromEntries(
       [
