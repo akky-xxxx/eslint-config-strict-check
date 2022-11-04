@@ -1,7 +1,6 @@
-import path from "path"
-
 import { Extends } from "../shared/const/Extends"
 import { Plugins } from "../shared/const/Plugins"
+import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
   plugins: Plugins,
@@ -17,6 +16,6 @@ export = {
       "../shared/config/unicorn",
       "../shared/config/javascript",
       "../shared/config/typescript",
-    ].map((configPath) => path.resolve(__dirname, configPath)),
+    ].map(getConfigFullPath(__dirname)),
   ],
 }

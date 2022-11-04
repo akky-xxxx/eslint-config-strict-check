@@ -1,8 +1,7 @@
-import path from "path"
-
 import { Extends } from "../shared/const/Extends"
 import { Plugins } from "../shared/const/Plugins"
 import { ReactExtends } from "../shared/const/ReactExtends"
+import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
   plugins: [...Plugins, "react", "react-hooks", "storybook", "strict-check"],
@@ -21,6 +20,6 @@ export = {
       "../shared/config/unicorn",
       "../shared/config/javascript",
       "../shared/config/typescript",
-    ].map((configPath) => path.resolve(__dirname, configPath)),
+    ].map(getConfigFullPath(__dirname)),
   ],
 }
