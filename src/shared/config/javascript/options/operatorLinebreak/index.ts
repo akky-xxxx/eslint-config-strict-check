@@ -1,7 +1,7 @@
-import { Warn } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const operatorLinebreak = [
-  Warn,
+  Severity.WARN,
   "after",
   {
     overrides: {

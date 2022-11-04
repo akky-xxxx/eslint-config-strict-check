@@ -1,21 +1,21 @@
-import { Off } from "../../const"
+import { Severity } from "../../const/Severity"
 import { preventAbbreviations } from "./options/preventAbbreviations"
 
 export = {
   rules: {
-    "unicorn/explicit-length-check": Off,
-    "unicorn/filename-case": Off,
-    "unicorn/new-for-builtins": Off,
-    "unicorn/no-array-callback-reference": Off,
-    "unicorn/no-array-for-each": Off,
-    "unicorn/no-array-reduce": Off,
-    "unicorn/no-lonely-if": Off,
-    "unicorn/no-new-array": Off,
-    "unicorn/no-null": Off,
-    "unicorn/no-useless-undefined": Off,
-    "unicorn/prefer-module": Off,
-    "unicorn/prefer-node-protocol": Off,
-    "unicorn/prefer-number-properties": Off,
+    "unicorn/explicit-length-check": Severity.OFF,
+    "unicorn/filename-case": Severity.OFF,
+    "unicorn/new-for-builtins": Severity.OFF,
+    "unicorn/no-array-callback-reference": Severity.OFF,
+    "unicorn/no-array-for-each": Severity.OFF,
+    "unicorn/no-array-reduce": Severity.OFF,
+    "unicorn/no-lonely-if": Severity.OFF,
+    "unicorn/no-new-array": Severity.OFF,
+    "unicorn/no-null": Severity.OFF,
+    "unicorn/no-useless-undefined": Severity.OFF,
+    "unicorn/prefer-module": Severity.OFF,
+    "unicorn/prefer-node-protocol": Severity.OFF,
+    "unicorn/prefer-number-properties": Severity.OFF,
     "unicorn/prevent-abbreviations": preventAbbreviations,
   },
 }

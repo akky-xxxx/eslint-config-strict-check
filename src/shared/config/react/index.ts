@@ -1,4 +1,4 @@
-import { Error, Off } from "../../const"
+import { Severity } from "../../const/Severity"
 import { collectiveSetting } from "../../utils/collectiveSetting"
 import { functionComponentDefinition } from "./options/functionComponentDefinition"
 import { jsxNoLeakedRender } from "./options/jsxNoLeakedRender"
@@ -6,27 +6,27 @@ import { jsxSortProps } from "./options/jsxSortProps"
 
 export = {
   rules: {
-    "react/boolean-prop-naming": Error,
+    "react/boolean-prop-naming": Severity.ERROR,
     "react/function-component-definition": functionComponentDefinition,
-    "react/iframe-missing-sandbox": Error,
-    "react/jsx-filename-extension": [Error, { extensions: [".ts", ".tsx"] }],
-    "react/jsx-fragments": [Error, "element"],
+    "react/iframe-missing-sandbox": Severity.ERROR,
+    "react/jsx-filename-extension": [Severity.ERROR, { extensions: [".ts", ".tsx"] }],
+    "react/jsx-fragments": [Severity.ERROR, "element"],
     "react/jsx-no-leaked-render": jsxNoLeakedRender,
     "react/jsx-sort-props": jsxSortProps,
 
     // prerequisites for using typescript
-    "react/jsx-props-no-spreading": Off,
-    "react/prop-types": Off,
-    "react/require-default-props": Off,
+    "react/jsx-props-no-spreading": Severity.OFF,
+    "react/prop-types": Severity.OFF,
+    "react/require-default-props": Severity.OFF,
 
     // prerequisites for using react 17 over
-    "react/react-in-jsx-scope": Off,
+    "react/react-in-jsx-scope": Severity.OFF,
   },
 
   overrides: [
     {
       files: ["**/*.tsx"],
-      rules: collectiveSetting(["no-use-before-define"], Off),
+      rules: collectiveSetting(["no-use-before-define"], Severity.OFF),
     },
   ],
 }

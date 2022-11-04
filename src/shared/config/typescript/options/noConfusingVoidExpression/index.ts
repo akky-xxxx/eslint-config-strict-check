@@ -1,3 +1,3 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
-export const noConfusingVoidExpression = [Error, { ignoreVoidOperator: true }]
+export const noConfusingVoidExpression = [Severity.ERROR, { ignoreVoidOperator: true }]

@@ -1,3 +1,3 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
-export const consistentTypeImports = [Error, { prefer: "type-imports" }]
+export const consistentTypeImports = [Severity.ERROR, { prefer: "type-imports" }]

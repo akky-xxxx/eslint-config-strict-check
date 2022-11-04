@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const extensions = [
-  Error,
+  Severity.ERROR,
   {
     js: "never",
     ts: "never",
