@@ -1,7 +1,9 @@
 import path from "path"
 
+import { Plugins } from "../shared/const/Plugins"
+
 export = {
-  plugins: ["@typescript-eslint", "jest", "tsdoc", "unicorn"],
+  plugins: Plugins,
 
   extends: [
     "plugin:@typescript-eslint/recommended",
