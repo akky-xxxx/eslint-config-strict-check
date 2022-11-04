@@ -2,20 +2,14 @@ import path from "path"
 
 import { Extends } from "../shared/const/Extends"
 import { Plugins } from "../shared/const/Plugins"
+import { ReactExtends } from "../shared/const/ReactExtends"
 
 export = {
   plugins: [...Plugins, "storybook", "strict-check"],
 
   extends: [
     ...Extends,
-    "plugin:storybook/addon-interactions",
-    "plugin:storybook/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:strict-check/react",
-    "airbnb",
-    "airbnb/hooks",
+    ...ReactExtends,
     "next/core-web-vitals",
     "prettier",
     ...[
