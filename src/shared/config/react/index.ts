@@ -9,7 +9,10 @@ export = {
     "react/boolean-prop-naming": Severity.ERROR,
     "react/function-component-definition": functionComponentDefinition,
     "react/iframe-missing-sandbox": Severity.ERROR,
-    "react/jsx-filename-extension": [Severity.ERROR, { extensions: [".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      Severity.ERROR,
+      { extensions: [".ts", ".tsx"] },
+    ],
     "react/jsx-fragments": [Severity.ERROR, "element"],
     "react/jsx-no-leaked-render": jsxNoLeakedRender,
     "react/jsx-sort-props": jsxSortProps,

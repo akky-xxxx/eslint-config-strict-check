@@ -22,7 +22,10 @@ export = {
   overrides: [
     {
       files: ["**/*.{test,stories}.{ts,tsx}"],
-      rules: collectiveSetting(["import/no-extraneous-dependencies"], Severity.OFF),
+      rules: collectiveSetting(
+        ["import/no-extraneous-dependencies"],
+        Severity.OFF,
+      ),
     },
     {
       files: ["**/pages/**/*.{api,page}.{tsx,ts}", "**/*.stories.{ts,tsx}"],

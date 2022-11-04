@@ -13,7 +13,10 @@ export = {
   parser: "@typescript-eslint/parser",
   rules: {
     "@typescript-eslint/array-type": arrayType,
-    "@typescript-eslint/consistent-indexed-object-style": [Severity.ERROR, "record"],
+    "@typescript-eslint/consistent-indexed-object-style": [
+      Severity.ERROR,
+      "record",
+    ],
     "@typescript-eslint/consistent-type-assertions": consistentTypeAssertions,
     "@typescript-eslint/consistent-type-definitions": [Severity.ERROR, "type"],
     "@typescript-eslint/consistent-type-imports": consistentTypeImports,
