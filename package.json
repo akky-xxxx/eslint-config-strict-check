@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-strict-check",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "repository": {
     "type": "git",
     "url": "https://github.com/akky-xxxx/eslint-config-strict-check.git"
@@ -8,7 +8,7 @@
   "homepage": "https://github.com/akky-xxxx/eslint-config-strict-check",
   "license": "MIT",
   "engines": {
-    "node": "16.18.0",
+    "node": "16.18.1",
     "npm": "use \"yarn\" instead \"npm\"",
     "yarn": "1.22.19"
   },
