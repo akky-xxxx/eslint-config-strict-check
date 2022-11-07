@@ -1,7 +1,7 @@
-import { Warn } from "../../const"
+import { Severity } from "../../const/Severity"
 
 export = {
   rules: {
-    "tsdoc/syntax": Warn,
+    "tsdoc/syntax": Severity.WARN,
   },
 }

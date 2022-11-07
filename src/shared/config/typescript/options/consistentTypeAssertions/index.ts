@@ -1,3 +1,6 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
-export const consistentTypeAssertions = [Error, { assertionStyle: "never" }]
+export const consistentTypeAssertions = [
+  Severity.ERROR,
+  { assertionStyle: "never" },
+]

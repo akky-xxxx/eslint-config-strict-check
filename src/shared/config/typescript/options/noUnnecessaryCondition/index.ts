@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const noUnnecessaryCondition = [
-  Error,
+  Severity.ERROR,
   {
     allowConstantLoopConditions: false,
     allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,

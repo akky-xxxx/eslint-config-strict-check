@@ -1,3 +1,3 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
-export const noImplicitAnyCatch = [Error, { allowExplicitAny: false }]
+export const noImplicitAnyCatch = [Severity.ERROR, { allowExplicitAny: false }]

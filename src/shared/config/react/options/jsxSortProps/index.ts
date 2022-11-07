@@ -1,7 +1,7 @@
-import { Error } from "../../../../const"
+import { Severity } from "../../../../const/Severity"
 
 export const jsxSortProps = [
-  Error,
+  Severity.ERROR,
   {
     callbacksLast: true,
     multiline: "last",

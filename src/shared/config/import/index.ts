@@ -1,4 +1,4 @@
-import { Error, Off } from "../../const"
+import { Severity } from "../../const/Severity"
 import { collectiveSetting } from "../../utils/collectiveSetting"
 import { extensions } from "./options/extensions"
 import { order } from "./options/order"
@@ -6,9 +6,9 @@ import { order } from "./options/order"
 export = {
   rules: {
     "import/extensions": extensions,
-    "import/no-default-export": Error,
+    "import/no-default-export": Severity.ERROR,
     "import/order": order,
-    "import/prefer-default-export": Off,
+    "import/prefer-default-export": Severity.OFF,
   },
 
   settings: {
@@ -22,11 +22,14 @@ export = {
   overrides: [
     {
       files: ["**/*.{test,stories}.{ts,tsx}"],
-      rules: collectiveSetting(["import/no-extraneous-dependencies"], Off),
+      rules: collectiveSetting(
+        ["import/no-extraneous-dependencies"],
+        Severity.OFF,
+      ),
     },
     {
       files: ["**/pages/**/*.{api,page}.{tsx,ts}", "**/*.stories.{ts,tsx}"],
-      rules: collectiveSetting(["import/no-default-export"], Off),
+      rules: collectiveSetting(["import/no-default-export"], Severity.OFF),
     },
   ],
 }

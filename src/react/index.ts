@@ -1,32 +1,14 @@
-import path from "path"
+import { Extends } from "../shared/const/Extends"
+import { Plugins } from "../shared/const/Plugins"
+import { ReactExtends } from "../shared/const/ReactExtends"
+import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
-  plugins: [
-    "@typescript-eslint",
-    "jest",
-    "react",
-    "react-hooks",
-    "storybook",
-    "strict-check",
-    "tsdoc",
-    "unicorn",
-  ],
+  plugins: [...Plugins, "react", "react-hooks", "storybook", "strict-check"],
 
   extends: [
-    "eslint:recommended",
-    "plugin:storybook/addon-interactions",
-    "plugin:storybook/recommended",
-    "plugin:unicorn/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:jest/recommended",
-    "plugin:jest/style",
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:strict-check/react",
-    "airbnb",
-    "airbnb/hooks",
+    ...Extends,
+    ...ReactExtends,
     "prettier",
     ...[
       "../shared/config/import",
@@ -38,6 +20,6 @@ export = {
       "../shared/config/unicorn",
       "../shared/config/javascript",
       "../shared/config/typescript",
-    ].map((configPath) => path.resolve(__dirname, configPath)),
+    ].map(getConfigFullPath(__dirname)),
   ],
 }

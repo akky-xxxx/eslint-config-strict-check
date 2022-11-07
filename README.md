@@ -2,6 +2,12 @@
 - Strict config for eslint.
 
 ## How to use
+### Installation
+
+```shell
+$ yarn add -D eslint-config-strick-check
+```
+
 ### Each to use
 #### Use for TypeScript
 
@@ -43,6 +49,7 @@ module.exports = {
 - [eslint-plugin-storybook](https://www.npmjs.com/package/eslint-plugin-storybook)
 - [eslint-plugin-tsdoc](https://www.npmjs.com/package/eslint-plugin-tsdoc)
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
+- [eslint-plugin-strict-check](https://www.npmjs.com/package/eslint-plugin-strict-check)
 
 ## License
 - [MIT](LICENSE)
