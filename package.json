@@ -1,17 +1,12 @@
 {
   "name": "eslint-config-strict-check",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "repository": {
     "type": "git",
     "url": "https://github.com/akky-xxxx/eslint-config-strict-check.git"
   },
   "homepage": "https://github.com/akky-xxxx/eslint-config-strict-check",
   "license": "MIT",
-  "engines": {
-    "node": "16.18.1",
-    "npm": "use \"yarn\" instead \"npm\"",
-    "yarn": "1.22.19"
-  },
   "main": "out/index.js",
   "exports": {
     ".": "./out/index.js",
@@ -73,7 +68,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.4",
-    "eslint-plugin-strict-check": "^0.0.6",
+    "eslint-plugin-strict-check": "^0.0.8",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-unicorn": "^44.0.0",
     "fixpack": "^4.0.0",
@@ -96,7 +91,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.4",
-    "eslint-plugin-strict-check": "^0.0.6",
+    "eslint-plugin-strict-check": "^0.0.6 || ^0.0.7",
     "eslint-plugin-tsdoc": "^0.2.17",
     "eslint-plugin-unicorn": "^44.0.0"
   },
