@@ -7,7 +7,6 @@ on:
       - feature/**
       - main
     paths-ignore:
-      - '.github/workflows/**'
       - '.husky/**'
       - 'scripts/**'
 
