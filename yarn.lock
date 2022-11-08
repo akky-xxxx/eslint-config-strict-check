@@ -2679,10 +2679,10 @@ eslint-plugin-storybook@^0.6.4:
     requireindex "^1.1.0"
     ts-dedent "^2.2.0"
 
-eslint-plugin-strict-check@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-strict-check/-/eslint-plugin-strict-check-0.0.7.tgz#e4a29f9cbe61e9df07b1f58fd4adb4c0cf628d51"
-  integrity sha512-7DrG8sMpRMmrtn99j6K0Vk3rTkyc6Ep+5C7d3ernMfqY5/o800pjIxu8j5X3+RQ4Qi+TUtNBO6f58XHj+Gyk5A==
+eslint-plugin-strict-check@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-strict-check/-/eslint-plugin-strict-check-0.0.8.tgz#776272d07eecf3179a48124ecd0a5723ae36729a"
+  integrity sha512-ABbSyb4cqUqpIpIQhvStOTmCyx0q3jMlCS9Pe3zzOE7CnnleeXJ2r/VH9u5VV3aaLuxCROfqhFGOoY+h5T7Ydg==
 
 eslint-plugin-tsdoc@^0.2.17:
   version "0.2.17"
