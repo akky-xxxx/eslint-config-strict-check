@@ -30,6 +30,7 @@ export = {
       noUnnecessaryBooleanLiteralCompare,
     "@typescript-eslint/no-unnecessary-condition": noUnnecessaryCondition,
     "@typescript-eslint/no-unnecessary-type-arguments": Severity.WARN,
+    "@typescript-eslint/no-use-before-define": Severity.ERROR,
     "@typescript-eslint/prefer-string-starts-ends-with": Severity.WARN,
     "@typescript-eslint/sort-type-union-intersection-members":
       sortTypeUnionIntersectionMembers,
@@ -51,6 +52,18 @@ export = {
           "@typescript-eslint/no-unsafe-call",
           "@typescript-eslint/no-unsafe-member-access",
         ],
+        Severity.OFF,
+      ),
+    },
+    {
+      // Transfer to @typescript-eslint/no-use-before-define
+      files: ["**/*.*"],
+      rules: collectiveSetting(["no-use-before-define"], Severity.OFF),
+    },
+    {
+      files: ["**/*.tsx"],
+      rules: collectiveSetting(
+        ["@typescript-eslint/no-use-before-define"],
         Severity.OFF,
       ),
     },
