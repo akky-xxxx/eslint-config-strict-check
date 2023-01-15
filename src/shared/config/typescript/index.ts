@@ -1,5 +1,3 @@
-import { Severity } from "../../const/Severity"
-import { collectiveSetting } from "../../utils/collectiveSetting"
 import { arrayType } from "./options/arrayType"
 import { consistentTypeAssertions } from "./options/consistentTypeAssertions"
 import { consistentTypeImports } from "./options/consistentTypeImports"
@@ -8,6 +6,8 @@ import { noImplicitAnyCatch } from "./options/noImplicitAnyCatch"
 import { noUnnecessaryBooleanLiteralCompare } from "./options/noUnnecessaryBooleanLiteralCompare"
 import { noUnnecessaryCondition } from "./options/noUnnecessaryCondition"
 import { sortTypeUnionIntersectionMembers } from "./options/sortTypeUnionIntersectionMembers"
+import { Severity } from "../../const/Severity"
+import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   parser: "@typescript-eslint/parser",

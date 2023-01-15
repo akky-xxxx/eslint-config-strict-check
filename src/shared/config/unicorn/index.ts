@@ -1,8 +1,9 @@
-import { Severity } from "../../const/Severity"
 import { preventAbbreviations } from "./options/preventAbbreviations"
+import { Severity } from "../../const/Severity"
 
 export = {
   rules: {
+    "unicorn/consistent-destructuring": Severity.WARN,
     "unicorn/explicit-length-check": Severity.OFF,
     "unicorn/filename-case": Severity.OFF,
     "unicorn/new-for-builtins": Severity.OFF,

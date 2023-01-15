@@ -1,9 +1,10 @@
-const { Off } = require("../const")
+const { Off, Warn } = require("../const")
 const { preventAbbreviations } = require("./configs/preventAbbreviations")
 
 module.exports = {
   plugins: ["unicorn"],
   rules: {
+    "unicorn/consistent-destructuring": Warn,
     "unicorn/explicit-length-check": Off,
     "unicorn/filename-case": Off,
     "unicorn/new-for-builtins": Off,

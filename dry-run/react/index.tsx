@@ -1,5 +1,5 @@
 /* eslint-disable complexity, no-console */
-/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/consistent-type-imports, @typescript-eslint/ban-ts-comment */
+/* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 import React, { Fragment } from "react"
 
