@@ -1,8 +1,8 @@
-import { Severity } from "../../const/Severity"
-import { collectiveSetting } from "../../utils/collectiveSetting"
 import { functionComponentDefinition } from "./options/functionComponentDefinition"
 import { jsxNoLeakedRender } from "./options/jsxNoLeakedRender"
 import { jsxSortProps } from "./options/jsxSortProps"
+import { Severity } from "../../const/Severity"
+import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   rules: {

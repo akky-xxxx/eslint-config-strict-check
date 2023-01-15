@@ -1,6 +1,6 @@
+import { operatorLinebreak } from "./options/operatorLinebreak"
 import { Severity } from "../../const/Severity"
 import { collectiveSetting } from "../../utils/collectiveSetting"
-import { operatorLinebreak } from "./options/operatorLinebreak"
 
 export = {
   rules: {
