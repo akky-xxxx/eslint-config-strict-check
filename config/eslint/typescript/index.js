@@ -35,6 +35,7 @@ module.exports = {
       noUnnecessaryBooleanLiteralCompare,
     "@typescript-eslint/no-unnecessary-condition": noUnnecessaryCondition,
     "@typescript-eslint/no-unnecessary-type-arguments": Warn,
+    "@typescript-eslint/no-use-before-define": Error,
     "@typescript-eslint/prefer-string-starts-ends-with": Warn,
     "@typescript-eslint/sort-type-union-intersection-members":
       sortTypeUnionIntersectionMembers,
