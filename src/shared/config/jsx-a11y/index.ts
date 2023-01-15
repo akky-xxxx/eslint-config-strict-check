@@ -1,7 +1,7 @@
-import { Severity } from "../../const/Severity"
-import { collectiveSetting } from "../../utils/collectiveSetting"
 import { anchorIsValid } from "./options/anchorIsValid"
 import { labelHasAssociatedControl } from "./options/labelHasAssociatedControl"
+import { Severity } from "../../const/Severity"
+import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   rules: {

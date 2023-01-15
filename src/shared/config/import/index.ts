@@ -1,7 +1,7 @@
-import { Severity } from "../../const/Severity"
-import { collectiveSetting } from "../../utils/collectiveSetting"
 import { extensions } from "./options/extensions"
 import { order } from "./options/order"
+import { Severity } from "../../const/Severity"
+import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   rules: {

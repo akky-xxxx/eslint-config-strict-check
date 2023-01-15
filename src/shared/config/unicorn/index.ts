@@ -1,5 +1,5 @@
-import { Severity } from "../../const/Severity"
 import { preventAbbreviations } from "./options/preventAbbreviations"
+import { Severity } from "../../const/Severity"
 
 export = {
   rules: {
