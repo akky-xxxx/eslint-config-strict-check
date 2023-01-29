@@ -18,7 +18,7 @@ export const javascriptTest1 = () => {
   const state6 = Math.random()
   const state7 = Math.random()
   const state8 = Math.random()
-  /* eslint-disable unicorn/numeric-separators-style, no-magic-numbers */
+  /* eslint-disable unicorn/numeric-separators-style, @typescript-eslint/no-magic-numbers */
   const array = [
     1000000000000,
     1000000000000,
