@@ -4,7 +4,7 @@ import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   rules: {
-    /* eslint-disable no-magic-numbers */
+    /* eslint-disable @typescript-eslint/no-magic-numbers */
     complexity: [Severity.ERROR, 5],
     "implicit-arrow-linebreak": [Severity.OFF],
     "max-depth": [Severity.ERROR, 3],
@@ -20,7 +20,7 @@ export = {
     quotes: [Severity.ERROR, "double", { avoidEscape: true }],
     semi: [Severity.ERROR, "never"],
     "sort-keys": [Severity.WARN, "asc", { allowLineSeparatedGroups: true }],
-    /* eslint-enable no-magic-numbers */
+    /* eslint-enable @typescript-eslint/no-magic-numbers */
   },
 
   overrides: [

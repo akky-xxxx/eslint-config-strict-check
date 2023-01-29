@@ -10,7 +10,6 @@ module.exports = {
     "max-nested-callbacks": [Error, 3],
     "max-statements": [Error, 10],
     "multiline-comment-style": Off,
-    "no-magic-numbers": Warn,
     "no-undefined": Warn,
     "no-unused-vars": Off,
     "no-use-before-define": Off,
