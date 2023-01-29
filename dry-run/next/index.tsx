@@ -33,10 +33,17 @@ type ReactTest1Props = {
 
 export const ReactTest1: FC<ReactTest1Props> = (props) => {
   const { bool, count, empty, title } = props
+  // eslint-disable-next-line strict-check/individual-import
+  const state = React.useState("")
+  console.log(state)
 
-  // eslint-disable-next-line strict-check/event-handler-prefix, strict-check/individual-import, unicorn/consistent-function-scoping
+  // eslint-disable-next-line strict-check/event-handler-prefix, strict-check/individual-import,
   const onClick: React.EventHandler<unknown> = () => {
-    console.log("onClick")
+    // eslint-disable-next-line unicorn/consistent-function-scoping
+    const handleClick = () => {
+      //
+    }
+    console.log("onClick", handleClick)
   }
 
   return (
