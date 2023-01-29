@@ -12,6 +12,9 @@ import { collectiveSetting } from "../../utils/collectiveSetting"
 export = {
   parser: "@typescript-eslint/parser",
   rules: {
+    "no-magic-numbers": Severity.OFF,
+    "no-shadow": Severity.OFF,
+
     "@typescript-eslint/array-type": arrayType,
     "@typescript-eslint/consistent-indexed-object-style": [
       Severity.ERROR,
@@ -25,7 +28,9 @@ export = {
       noConfusingVoidExpression,
     "@typescript-eslint/no-floating-promises": Severity.WARN,
     "@typescript-eslint/no-implicit-any-catch": noImplicitAnyCatch,
+    "@typescript-eslint/no-magic-numbers": Severity.WARN,
     "@typescript-eslint/no-misused-promises": Severity.WARN,
+    "@typescript-eslint/no-shadow": Severity.WARN,
     "@typescript-eslint/no-unnecessary-boolean-literal-compare":
       noUnnecessaryBooleanLiteralCompare,
     "@typescript-eslint/no-unnecessary-condition": noUnnecessaryCondition,
@@ -52,6 +57,13 @@ export = {
           "@typescript-eslint/no-unsafe-call",
           "@typescript-eslint/no-unsafe-member-access",
         ],
+        Severity.OFF,
+      ),
+    },
+    {
+      files: ["**/*.{test,stories}.{ts,tsx}", "**/spy{/**,.ts}", "**/spec/**"],
+      rules: collectiveSetting(
+        ["@typescript-eslint/no-magic-numbers"],
         Severity.OFF,
       ),
     },
