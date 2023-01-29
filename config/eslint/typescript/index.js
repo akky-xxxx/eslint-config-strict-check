@@ -20,6 +20,9 @@ const { collectiveSetting } = require("../utils/collectiveSetting")
 module.exports = {
   parser: "@typescript-eslint/parser",
   rules: {
+    "no-magic-numbers": Off,
+    "no-shadow": Off,
+
     "@typescript-eslint/array-type": arrayType,
     "@typescript-eslint/consistent-indexed-object-style": [Error, "record"],
     "@typescript-eslint/consistent-type-assertions": consistentTypeAssertions,
@@ -30,7 +33,9 @@ module.exports = {
       noConfusingVoidExpression,
     "@typescript-eslint/no-floating-promises": Warn,
     "@typescript-eslint/no-implicit-any-catch": no_implicit_any_catch,
+    "@typescript-eslint/no-magic-numbers": Warn,
     "@typescript-eslint/no-misused-promises": Warn,
+    "@typescript-eslint/no-shadow": Warn,
     "@typescript-eslint/no-unnecessary-boolean-literal-compare":
       noUnnecessaryBooleanLiteralCompare,
     "@typescript-eslint/no-unnecessary-condition": noUnnecessaryCondition,
@@ -48,6 +53,10 @@ module.exports = {
     },
   },
   overrides: [
+    {
+      files: ["**/*.{test,stories}.{ts,tsx}", "**/spy{/**,.ts}", "**/spec/**"],
+      rules: collectiveSetting(["@typescript-eslint/no-magic-numbers"], Off),
+    },
     {
       files: ["**/*.test.{ts,tsx}"],
       rules: collectiveSetting(
