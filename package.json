@@ -11,8 +11,11 @@
   "exports": {
     ".": "./out/index.js",
     "./next": "./out/next/index.js",
+    "./next-max": "./out/nextMax/index.js",
     "./react": "./out/react/index.js",
-    "./typescript": "./out/typescript/index.js"
+    "./react-max": "./out/reactMax/index.js",
+    "./typescript": "./out/typescript/index.js",
+    "./typescript-max": "./out/typescriptMax/index.js"
   },
   "scripts": {
     "build": "swc \"./src\" -d \"./out\" --config-file .swcrc",
