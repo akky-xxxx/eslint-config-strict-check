@@ -11,7 +11,6 @@ export = {
     "prettier",
     ...[
       "../shared/config/import",
-      "../shared/config/jest",
       "../shared/config/tsdoc",
       "../shared/config/unicorn",
       "../shared/config/javascript",
