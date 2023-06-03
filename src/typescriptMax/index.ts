@@ -3,7 +3,7 @@ import { Plugins } from "../shared/const/Plugins"
 import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
-  plugins: Plugins,
+  plugins: [...Plugins, "jest"],
 
   extends: [
     ...Extends,

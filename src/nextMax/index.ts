@@ -4,7 +4,7 @@ import { ReactExtends } from "../shared/const/ReactExtends"
 import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
-  plugins: [...Plugins, "storybook", "strict-check"],
+  plugins: [...Plugins, "jest", "storybook", "strict-check"],
 
   extends: [
     ...Extends,
