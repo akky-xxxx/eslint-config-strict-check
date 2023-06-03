@@ -14,7 +14,16 @@ $ yarn add -D eslint-config-strick-check
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check"]
+    extends: ["strict-check"] // or ["strict-check/typescript"]
+}
+```
+
+#### Use for TypeScript with Jest
+
+```javascript
+// .eslintrc.js
+module.exports = {
+    extends: ["strict-check/typescript-max"]
 }
 ```
 
@@ -27,12 +36,30 @@ module.exports = {
 }
 ```
 
+#### Use for React with TypeScript, Jest, Storybook
+
+```javascript
+// .eslintrc.js
+module.exports = {
+    extends: ["strict-check/react-max"]
+}
+```
+
 #### Use for Next.js with TypeScript
 
 ```javascript
 // .eslintrc.js
 module.exports = {
     extends: ["strict-check/next"]
+}
+```
+
+#### Use for Next.js with TypeScript, Jest, Storybook
+
+```javascript
+// .eslintrc.js
+module.exports = {
+    extends: ["strict-check/next-max"]
 }
 ```
 
