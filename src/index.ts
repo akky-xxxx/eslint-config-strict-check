@@ -1,3 +1,3 @@
-import config from "./typescript"
+import config from "./typescriptMax"
 
 export = config
