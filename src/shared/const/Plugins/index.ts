@@ -1,1 +1,1 @@
-export const Plugins = ["@typescript-eslint", "tsdoc", "unicorn"] as const
+export const Plugins = ["@typescript-eslint", "unicorn"] as const

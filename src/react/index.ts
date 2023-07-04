@@ -12,7 +12,6 @@ export = {
     "prettier",
     ...[
       "../shared/config/import",
-      "../shared/config/tsdoc",
       "../shared/config/jsx-a11y",
       "../shared/config/react",
       "../shared/config/unicorn",
