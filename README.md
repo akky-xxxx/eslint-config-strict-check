@@ -77,6 +77,11 @@ module.exports = {
 - [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn)
 - [eslint-plugin-strict-check](https://www.npmjs.com/package/eslint-plugin-strict-check)
 
+## Recommended, but not includes
+### plugin
+- [eslint-plugin-sonarjs](https://www.npmjs.com/package/eslint-plugin-sonarjs)
+- [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc)
+
 ## License
 - [MIT](LICENSE)
 - This is includes the work that is distributed in the Apache License 2.0.
