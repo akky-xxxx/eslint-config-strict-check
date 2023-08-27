@@ -1,3 +1,5 @@
+// eslint-disable-next-line unicorn/prevent-abbreviations
+import { booleanPropNaming } from "./options/booleanPropNaming"
 import { functionComponentDefinition } from "./options/functionComponentDefinition"
 import { jsxNoLeakedRender } from "./options/jsxNoLeakedRender"
 import { jsxSortProps } from "./options/jsxSortProps"
@@ -6,7 +8,7 @@ import { collectiveSetting } from "../../utils/collectiveSetting"
 
 export = {
   rules: {
-    "react/boolean-prop-naming": Severity.ERROR,
+    "react/boolean-prop-naming": booleanPropNaming,
     "react/function-component-definition": functionComponentDefinition,
     "react/iframe-missing-sandbox": Severity.ERROR,
     "react/jsx-filename-extension": [

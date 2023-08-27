@@ -8,7 +8,7 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
 
-  plugins: ["@typescript-eslint", "jest", "tsdoc", "unicorn"],
+  plugins: ["@typescript-eslint", "jest", "unicorn"],
 
   extends: [
     "eslint:recommended",
@@ -21,7 +21,6 @@ module.exports = {
     "prettier",
     "./config/eslint/import",
     "./config/eslint/jest",
-    "./config/eslint/tsdoc",
     "./config/eslint/unicorn",
     "./config/eslint/javascript",
     "./config/eslint/typescript",
