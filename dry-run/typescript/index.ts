@@ -130,6 +130,7 @@ export const javascriptTest2 = () => {
   if (Math.random() === Zero) return Zero
   if (Math.random() === Zero) return Zero
   if (Math.random() === Zero) return Zero
+  // eslint-disable-next-line @typescript-eslint/no-redundant-type-constituents
   const a: number | unknown = 1
   // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
   return a as number
@@ -169,7 +170,7 @@ export const log = console.log("")
 try {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const random = Math.random()
-  // eslint-disable-next-line unicorn/prevent-abbreviations, unicorn/catch-error-name, @typescript-eslint/no-implicit-any-catch
+  // eslint-disable-next-line unicorn/prevent-abbreviations, unicorn/catch-error-name
 } catch (e) {
   console.error(e)
 }
@@ -190,5 +191,5 @@ testFunction<number>(Zero)
 const result = /^bar/.test("test")
 console.log(result)
 
-// eslint-disable-next-line @typescript-eslint/sort-type-union-intersection-members
+// eslint-disable-next-line @typescript-eslint/sort-type-constituents
 export type testType = "B" | "A"

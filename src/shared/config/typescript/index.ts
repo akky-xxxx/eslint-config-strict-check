@@ -2,10 +2,8 @@ import { arrayType } from "./options/arrayType"
 import { consistentTypeAssertions } from "./options/consistentTypeAssertions"
 import { consistentTypeImports } from "./options/consistentTypeImports"
 import { noConfusingVoidExpression } from "./options/noConfusingVoidExpression"
-import { noImplicitAnyCatch } from "./options/noImplicitAnyCatch"
 import { noUnnecessaryBooleanLiteralCompare } from "./options/noUnnecessaryBooleanLiteralCompare"
 import { noUnnecessaryCondition } from "./options/noUnnecessaryCondition"
-import { sortTypeUnionIntersectionMembers } from "./options/sortTypeUnionIntersectionMembers"
 import { Severity } from "../../const/Severity"
 import { collectiveSetting } from "../../utils/collectiveSetting"
 
@@ -27,7 +25,6 @@ export = {
     "@typescript-eslint/no-confusing-void-expression":
       noConfusingVoidExpression,
     "@typescript-eslint/no-floating-promises": Severity.WARN,
-    "@typescript-eslint/no-implicit-any-catch": noImplicitAnyCatch,
     "@typescript-eslint/no-magic-numbers": Severity.WARN,
     "@typescript-eslint/no-misused-promises": Severity.WARN,
     "@typescript-eslint/no-shadow": Severity.WARN,
@@ -37,8 +34,7 @@ export = {
     "@typescript-eslint/no-unnecessary-type-arguments": Severity.WARN,
     "@typescript-eslint/no-use-before-define": Severity.ERROR,
     "@typescript-eslint/prefer-string-starts-ends-with": Severity.WARN,
-    "@typescript-eslint/sort-type-union-intersection-members":
-      sortTypeUnionIntersectionMembers,
+    "@typescript-eslint/sort-type-constituents": Severity.ERROR,
   },
 
   settings: {

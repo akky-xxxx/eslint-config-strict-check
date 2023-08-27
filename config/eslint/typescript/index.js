@@ -7,14 +7,10 @@ const { consistentTypeImports } = require("./configs/consistentTypeImports")
 const {
   noConfusingVoidExpression,
 } = require("./configs/noConfusingVoidExpression")
-const { no_implicit_any_catch } = require("./configs/no_implicit_any_catch")
 const {
   noUnnecessaryBooleanLiteralCompare,
 } = require("./configs/noUnnecessaryBooleanLiteralCompare")
 const { noUnnecessaryCondition } = require("./configs/noUnnecessaryCondition")
-const {
-  sortTypeUnionIntersectionMembers,
-} = require("./configs/sortTypeUnionIntersectionMembers")
 const { collectiveSetting } = require("../utils/collectiveSetting")
 
 module.exports = {
@@ -32,7 +28,6 @@ module.exports = {
     "@typescript-eslint/no-confusing-void-expression":
       noConfusingVoidExpression,
     "@typescript-eslint/no-floating-promises": Warn,
-    "@typescript-eslint/no-implicit-any-catch": no_implicit_any_catch,
     "@typescript-eslint/no-magic-numbers": Warn,
     "@typescript-eslint/no-misused-promises": Warn,
     "@typescript-eslint/no-shadow": Warn,
@@ -42,8 +37,7 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-type-arguments": Warn,
     "@typescript-eslint/no-use-before-define": Error,
     "@typescript-eslint/prefer-string-starts-ends-with": Warn,
-    "@typescript-eslint/sort-type-union-intersection-members":
-      sortTypeUnionIntersectionMembers,
+    "@typescript-eslint/sort-type-constituents": Error,
   },
   settings: {
     "import/resolver": {
