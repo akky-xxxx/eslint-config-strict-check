@@ -1,4 +1,4 @@
-/* eslint-disable complexity, no-console */
+/* eslint-disable complexity, no-console, max-lines */
 /* eslint-disable import/no-extraneous-dependencies, @typescript-eslint/ban-ts-comment */
 // @ts-ignore
 import React, { Fragment } from "react"
@@ -84,4 +84,18 @@ export function ReactTest2() {
       />
     </Fragment>
   )
+}
+
+type ReactTest3Props = {
+  isStart: boolean
+  hasData: boolean
+  existData: boolean
+  enableSubmit: boolean
+}
+
+export const ReactTest3 = (props: ReactTest3Props) => {
+  const { isStart, hasData, existData, enableSubmit } = props
+  console.log(isStart, hasData, existData, enableSubmit)
+
+  return null
 }
