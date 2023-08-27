@@ -34,6 +34,7 @@ export = {
     "@typescript-eslint/no-unnecessary-type-arguments": Severity.WARN,
     "@typescript-eslint/no-use-before-define": Severity.ERROR,
     "@typescript-eslint/prefer-string-starts-ends-with": Severity.WARN,
+    "@typescript-eslint/sort-type-constituents": Severity.ERROR,
   },
 
   settings: {

@@ -37,6 +37,7 @@ module.exports = {
     "@typescript-eslint/no-unnecessary-type-arguments": Warn,
     "@typescript-eslint/no-use-before-define": Error,
     "@typescript-eslint/prefer-string-starts-ends-with": Warn,
+    "@typescript-eslint/sort-type-constituents": Error,
   },
   settings: {
     "import/resolver": {
