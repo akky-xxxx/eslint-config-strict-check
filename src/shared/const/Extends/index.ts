@@ -1,6 +1,5 @@
 export const Extends = [
-  "plugin:@typescript-eslint/recommended",
-  "plugin:@typescript-eslint/recommended-requiring-type-checking",
+  "plugin:@typescript-eslint/recommended-type-checked",
   "plugin:jest/recommended",
   "plugin:jest/style",
   "plugin:unicorn/recommended",
