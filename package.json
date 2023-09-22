@@ -71,7 +71,7 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-storybook": "^0.6.4",
-    "eslint-plugin-strict-check": "^0.0.14",
+    "eslint-plugin-strict-check": "^0.0.15",
     "eslint-plugin-unicorn": "^48.0.0",
     "fixpack": "^4.0.0",
     "husky": "^8.0.1",
