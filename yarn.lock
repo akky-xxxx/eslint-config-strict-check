@@ -2990,13 +2990,13 @@ eslint-plugin-storybook@^0.6.4:
     requireindex "^1.1.0"
     ts-dedent "^2.2.0"
 
-eslint-plugin-strict-check@^0.0.15:
-  version "0.0.15"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-strict-check/-/eslint-plugin-strict-check-0.0.15.tgz#9e00c8c8a9355a5a892caa93584c588867eb2ce9"
-  integrity sha512-3f+emKj5j3X3r0GvbiNrtn+Ke39D21d9o4hwSdjclOfzHpqb6VApylBz/dMD0uCunsrc+rckf1/Am3Ic96KcIA==
+eslint-plugin-strict-check@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-strict-check/-/eslint-plugin-strict-check-0.0.16.tgz#9ece8a2d40acaf1820235a0031202f19a404f61a"
+  integrity sha512-droZiiTY4iGGsL29C29tjatf7OBDx/2OQYjTCN7c9z5g/ZXXWCOmb28MxGw+47P78gFTTx/jPSgAglWfnXDNaA==
   dependencies:
-    remeda "1.27.0"
-    zod "3.22.2"
+    remeda "1.29.0"
+    zod "3.22.4"
 
 eslint-plugin-unicorn@^49.0.0:
   version "49.0.0"
@@ -5452,10 +5452,10 @@ regjsparser@^0.10.0:
   dependencies:
     jsesc "~0.5.0"
 
-remeda@1.27.0:
-  version "1.27.0"
-  resolved "https://registry.yarnpkg.com/remeda/-/remeda-1.27.0.tgz#3c383018a86692c0491b210dc88475dba90f6346"
-  integrity sha512-Vv4gz6z8WnKPA01ObvswV09bBOkB/jKjlszsfxAH82YEvEWfVvaelUuKOpKkLwlli1xyAwwlfWAAmpHlSXENRQ==
+remeda@1.29.0:
+  version "1.29.0"
+  resolved "https://registry.yarnpkg.com/remeda/-/remeda-1.29.0.tgz#17550492ba30f128358510817fe1f0573dfb1b29"
+  integrity sha512-M3LQ14KtMdQ1879lj/kKji3zBk158s7Rwg963mEkTfQFMxnKrIEAMxJfo/+0sp/+uGgN/KMVU2MBA4LNjqf8YQ==
 
 repeat-string@^1.6.1:
   version "1.6.1"
@@ -6430,7 +6430,7 @@ yocto-queue@^1.0.0:
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-1.0.0.tgz#7f816433fb2cbc511ec8bf7d263c3b58a1a3c251"
   integrity sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==
 
-zod@3.22.2:
-  version "3.22.2"
-  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.2.tgz#3add8c682b7077c05ac6f979fea6998b573e157b"
-  integrity sha512-wvWkphh5WQsJbVk1tbx1l1Ly4yg+XecD+Mq280uBGt9wa5BKSWf4Mhp6GmrkPixhMxmabYY7RbzlwVP32pbGCg==
+zod@3.22.4:
+  version "3.22.4"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.22.4.tgz#f31c3a9386f61b1f228af56faa9255e845cf3fff"
+  integrity sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==
