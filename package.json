@@ -121,5 +121,6 @@
     "eslint-plugin-strict-check": {
       "optional": true
     }
-  }
+  },
+  "packageManager": "yarn@4.0.1"
 }
