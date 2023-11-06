@@ -31,9 +31,7 @@ jobs:
         run: yarn lint
 
       - name: Run dry-run
-        run: |
-          yarn build
-          yarn dry-run
+        run: yarn dry-run
 
       - name: Run spell-check
         run: yarn spell-check
