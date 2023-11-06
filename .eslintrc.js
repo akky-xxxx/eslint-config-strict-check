@@ -8,7 +8,7 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
 
-  plugins: ["@typescript-eslint", "jest", "unicorn"],
+  plugins: ["@typescript-eslint", "jest", "unicorn", "@stylistic"],
 
   extends: [
     "eslint:recommended",
@@ -24,6 +24,7 @@ module.exports = {
     "./config/eslint/unicorn",
     "./config/eslint/javascript",
     "./config/eslint/typescript",
+    "./config/eslint/stylistic",
   ],
   ignorePatterns: ["**/libs/**/*", "**/coverage/**", "**/out/**"],
   reportUnusedDisableDirectives: true,
