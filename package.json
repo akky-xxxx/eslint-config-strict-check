@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-strict-check",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "repository": {
     "type": "git",
     "url": "https://github.com/akky-xxxx/eslint-config-strict-check.git"
