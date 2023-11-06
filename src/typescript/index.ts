@@ -14,6 +14,7 @@ export = {
       "../shared/config/unicorn",
       "../shared/config/javascript",
       "../shared/config/typescript",
+      "../shared/config/stylistic",
     ].map(getConfigFullPath(__dirname)),
   ],
 }
