@@ -90,7 +90,7 @@ export const javascriptTest1 = () => {
     1000000000000,
     1000000000000,
   ]
-  /* eslint-enable unicorn/numeric-separators-style, no-magic-numbers */
+  /* eslint-enable unicorn/numeric-separators-style, @typescript-eslint/no-magic-numbers */
 
   return [
     state0,
@@ -143,7 +143,7 @@ export const javascriptObjectTest = {
   one: "one",
 
   five: "five",
-  // eslint-disable-next-line quotes
+  // eslint-disable-next-line @stylistic/quotes
   four: 'four',
   // eslint-disable-next-line no-undefined
   six: undefined,
