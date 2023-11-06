@@ -90,7 +90,7 @@ export const javascriptTest1 = () => {
     1000000000000,
     1000000000000,
   ]
-  /* eslint-enable unicorn/numeric-separators-style, no-magic-numbers */
+  /* eslint-enable unicorn/numeric-separators-style, @typescript-eslint/no-magic-numbers */
 
   return [
     state0,
