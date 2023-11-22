@@ -1994,12 +1994,12 @@ __metadata:
   linkType: hard
 
 "@types/jest@npm:^29.5.7":
-  version: 29.5.9
-  resolution: "@types/jest@npm:29.5.9"
+  version: 29.5.10
+  resolution: "@types/jest@npm:29.5.10"
   dependencies:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
-  checksum: 66fe6b9b1c72739d02edaf1c98468aec84c700d841376afab9321b5268cb7b656a00a3561408b6c37f8619fffa7902e2ef29357fbc355e3e641c18b254899e49
+  checksum: b46171d59d12a5f69bbe710f65eaf59a8073337c6b4a67dff8158575caec53f1c61f8a7d645b34d6ac3c4ea398acd30f0c5d1c4a131c0c918798019264a3397d
   languageName: node
   linkType: hard
 
@@ -2042,12 +2042,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:20.9.3":
-  version: 20.9.3
-  resolution: "@types/node@npm:20.9.3"
+"@types/node@npm:20.9.4":
+  version: 20.9.4
+  resolution: "@types/node@npm:20.9.4"
   dependencies:
     undici-types: "npm:~5.26.4"
-  checksum: 0f61809f00241d0f1db23f8d938ef287138754819150d026e57d2246fec0330ba4b771781ff0d2ed1ea0dd42953850424b495956ff89d06d0bf3995d53da75b1
+  checksum: c8b48ace4c7e17715fa901201c98275f8e5268cf5895a8d149777eb0ec6c3ef6c831ff3917e92da5453a5dbe13f230caa50b348a0601b0d50eb9e628010c0364
   languageName: node
   linkType: hard
 
@@ -4074,7 +4074,7 @@ __metadata:
     "@swc/core": "npm:^1.3.96"
     "@swc/jest": "npm:^0.2.29"
     "@types/jest": "npm:^29.5.7"
-    "@types/node": "npm:20.9.3"
+    "@types/node": "npm:20.9.4"
     "@types/react": "npm:^18.2.35"
     "@typescript-eslint/eslint-plugin": "npm:^6.9.1"
     "@typescript-eslint/parser": "npm:^6.9.1"
@@ -4090,7 +4090,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.33.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-storybook: "npm:^0.6.15"
-    eslint-plugin-strict-check: "npm:^0.0.17"
+    eslint-plugin-strict-check: "npm:^0.0.18"
     eslint-plugin-unicorn: "npm:^49.0.0"
     fixpack: "npm:^4.0.0"
     husky: "npm:^8.0.3"
@@ -4294,13 +4294,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-strict-check@npm:^0.0.17":
-  version: 0.0.17
-  resolution: "eslint-plugin-strict-check@npm:0.0.17"
+"eslint-plugin-strict-check@npm:^0.0.18":
+  version: 0.0.18
+  resolution: "eslint-plugin-strict-check@npm:0.0.18"
   dependencies:
     remeda: "npm:1.29.0"
     zod: "npm:3.22.4"
-  checksum: 534f77ac5d77149f49354d8a98035156e88902084166ac76dabea4cf73a7cdf78dbb904498263192ca01bb51f324879f9ebf27b2c38e2a4f282267c93ddbcbc1
+  checksum: c80dd5a96ffc8e266862e512967b5ade0552a5392839ffbcea486298fd57dbff01f2d33031d149797bc72f604b8625c7329714fbe6a84a4b3353992552dbe5ea
   languageName: node
   linkType: hard
 
