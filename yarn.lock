@@ -4178,7 +4178,7 @@ __metadata:
     eslint-plugin-react-hooks: 4.6.0
     eslint-plugin-storybook: 0.6.15
     eslint-plugin-strict-check: 0.0.18
-    eslint-plugin-unicorn: 49.0.0
+    eslint-plugin-unicorn: 50.0.1
   peerDependenciesMeta:
     eslint-config-airbnb:
       optional: true
