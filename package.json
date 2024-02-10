@@ -124,6 +124,6 @@
   },
   "packageManager": "yarn@4.1.0",
   "resolutions": {
-    "@swc/cli": "0.1.65"
+    "@swc/cli": "0.3.9"
   }
 }
