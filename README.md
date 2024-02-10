@@ -5,7 +5,7 @@
 ### Installation
 
 ```shell
-$ yarn add -D eslint-config-strick-check
+$ yarn add -D eslint-config-strict-check
 ```
 
 ### Each to use
