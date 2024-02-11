@@ -1,6 +1,7 @@
 import { Extends } from "../shared/const/Extends"
 import { Plugins } from "../shared/const/Plugins"
 import { ReactExtends } from "../shared/const/ReactExtends"
+import { ReactHooksExtends } from "../shared/const/ReactHooksExtends"
 import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
 
 export = {
@@ -9,6 +10,7 @@ export = {
   extends: [
     ...Extends,
     ...ReactExtends,
+    ...ReactHooksExtends,
     "prettier",
     ...[
       "../shared/config/import",
