@@ -4159,7 +4159,7 @@ __metadata:
     shx: "npm:^0.3.4"
     typescript: "npm:5.4.4"
   peerDependencies:
-    eslint: 8.56.0
+    eslint: 9.0.0
     eslint-config-airbnb: 19.0.4
     eslint-config-airbnb-base: 15.0.0
     eslint-config-next: 14.1.0
