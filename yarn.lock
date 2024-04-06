@@ -2195,7 +2195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0, @typescript-eslint/parser@npm:^6.21.0":
+"@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0":
   version: 6.21.0
   resolution: "@typescript-eslint/parser@npm:6.21.0"
   dependencies:
@@ -4164,7 +4164,6 @@ __metadata:
     "@types/node": "npm:20.12.5"
     "@types/react": "npm:^18.2.74"
     "@typescript-eslint/eslint-plugin": "npm:^7.5.0"
-    "@typescript-eslint/parser": "npm:^6.21.0"
     chokidar: "npm:^3.6.0"
     cspell: "npm:^8.6.1"
     editorconfig-checker: "npm:^5.1.5"
