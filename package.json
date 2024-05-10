@@ -93,7 +93,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-storybook": "0.6.15",
     "eslint-plugin-strict-check": "0.0.20",
-    "eslint-plugin-unicorn": "52.0.0"
+    "eslint-plugin-unicorn": "53.0.0"
   },
   "peerDependenciesMeta": {
     "eslint-config-airbnb": {
