@@ -4228,35 +4228,6 @@ __metadata:
     react: "npm:^18.3.1"
     shx: "npm:^0.3.4"
     typescript: "npm:5.4.5"
-  peerDependencies:
-    eslint: 9.3.0
-    eslint-config-airbnb: 19.0.4
-    eslint-config-airbnb-base: 15.0.0
-    eslint-config-next: 14.2.3
-    eslint-config-prettier: 9.1.0
-    eslint-plugin-jest: 28.5.0
-    eslint-plugin-react: 7.34.1
-    eslint-plugin-react-hooks: 4.6.2
-    eslint-plugin-storybook: 0.8.0
-    eslint-plugin-strict-check: 0.0.23
-    eslint-plugin-unicorn: 53.0.0
-  peerDependenciesMeta:
-    eslint-config-airbnb:
-      optional: true
-    eslint-config-airbnb-base:
-      optional: true
-    eslint-config-next:
-      optional: true
-    eslint-plugin-jest:
-      optional: true
-    eslint-plugin-react:
-      optional: true
-    eslint-plugin-react-hooks:
-      optional: true
-    eslint-plugin-storybook:
-      optional: true
-    eslint-plugin-strict-check:
-      optional: true
   languageName: unknown
   linkType: soft
 
