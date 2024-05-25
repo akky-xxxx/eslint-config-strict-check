@@ -121,8 +121,5 @@
       "optional": true
     }
   },
-  "packageManager": "yarn@4.1.1",
-  "resolutions": {
-    "@swc/cli": "0.1.65"
-  }
+  "packageManager": "yarn@4.1.1"
 }
