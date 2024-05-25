@@ -2099,21 +2099,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:20.12.12":
   version: 20.12.12
   resolution: "@types/node@npm:20.12.12"
   dependencies:
     undici-types: "npm:~5.26.4"
   checksum: 10c0/f374b763c744e8f16e4f38cf6e2c0eef31781ec9228c9e43a6f267880fea420fab0a238b59f10a7cb3444e49547c5e3785787e371fc242307310995b21988812
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:20.12.5":
-  version: 20.12.5
-  resolution: "@types/node@npm:20.12.5"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10c0/2da65516fba98f0417620e42bddbe53e144d4782d69cd37f99df2537c6850b9cfbdb8a017f02c61e9a074bcac84f9f3f221b250474ac8c6b95d507a47e8d53f9
   languageName: node
   linkType: hard
 
@@ -4258,7 +4249,7 @@ __metadata:
     "@swc/core": "npm:^1.4.12"
     "@swc/jest": "npm:^0.2.36"
     "@types/jest": "npm:^29.5.12"
-    "@types/node": "npm:20.12.5"
+    "@types/node": "npm:20.12.12"
     "@types/react": "npm:^18.2.74"
     "@typescript-eslint/eslint-plugin": "npm:^7.5.0"
     chokidar: "npm:^3.6.0"
@@ -4273,7 +4264,7 @@ __metadata:
     eslint-plugin-react: "npm:^7.34.1"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-storybook: "npm:^0.8.0"
-    eslint-plugin-strict-check: "npm:^0.0.20"
+    eslint-plugin-strict-check: "npm:^0.0.22"
     eslint-plugin-unicorn: "npm:^52.0.0"
     fixpack: "npm:^4.0.0"
     husky: "npm:^9.0.11"
@@ -4488,13 +4479,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-strict-check@npm:^0.0.20":
-  version: 0.0.20
-  resolution: "eslint-plugin-strict-check@npm:0.0.20"
+"eslint-plugin-strict-check@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "eslint-plugin-strict-check@npm:0.0.22"
   dependencies:
-    remeda: "npm:1.40.1"
-    zod: "npm:3.22.4"
-  checksum: 10c0/0e6dc4e0276b67a6d152fe844c7ba7df6be7cb6ec9402929d5dad7fe424e7bcb5ae6f9461d8aab5139a2335c4b63d69703727859da6af6f2a66960f78647fec1
+    remeda: "npm:1.61.0"
+    zod: "npm:3.23.8"
+  checksum: 10c0/19f04d0f068f2f91c9775972df13fa57346d9bedc3a5609f5130dcbc012e5c0cb624e56525579c632543f6289c80c5569229bc1c2234fad855089aadf8e2ec69
   languageName: node
   linkType: hard
 
@@ -8045,10 +8036,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remeda@npm:1.40.1":
-  version: 1.40.1
-  resolution: "remeda@npm:1.40.1"
-  checksum: 10c0/6b52f97cae0c5246492a3fabef77c3947c6049602238e3b035de7268bb4401bfa0ce002ae39e21b87a2b6510310b7be16b33a31ca1758c8b1416ab24dc4e3f2c
+"remeda@npm:1.61.0":
+  version: 1.61.0
+  resolution: "remeda@npm:1.61.0"
+  checksum: 10c0/dc9995e740adc93cddc31f814d9293f3fe327114fdab7fe9e4ac83d5607d63d05645662dec3280a6d9260105a848acfbc763c37ad8b0636f40805aab0cb4bf7e
   languageName: node
   linkType: hard
 
@@ -9423,9 +9414,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.22.4":
-  version: 3.22.4
-  resolution: "zod@npm:3.22.4"
-  checksum: 10c0/7578ab283dac0eee66a0ad0fc4a7f28c43e6745aadb3a529f59a4b851aa10872b3890398b3160f257f4b6817b4ce643debdda4fb21a2c040adda7862cab0a587
+"zod@npm:3.23.8":
+  version: 3.23.8
+  resolution: "zod@npm:3.23.8"
+  checksum: 10c0/8f14c87d6b1b53c944c25ce7a28616896319d95bc46a9660fe441adc0ed0a81253b02b5abdaeffedbeb23bdd25a0bf1c29d2c12dd919aef6447652dd295e3e69
   languageName: node
   linkType: hard
