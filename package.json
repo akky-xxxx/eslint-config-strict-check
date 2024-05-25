@@ -18,8 +18,12 @@
     "./typescript-max": "./out/typescriptMax/index.js"
   },
   "scripts": {
-    "build": "swc \"./src\" -d \"./out\" --config-file .swcrc",
-    "build:watch": "swc \"./src\" -d \"./out\" --config-file .swcrc --watch",
+    "build": "run-s \"build:*\"",
+    "build-watch": "swc \"./src\" -d \"./out\" --config-file .swcrc --watch",
+    "build:1": "rm -rf ./out",
+    "build:2": "swc \"./src\" -d \"./out\" --config-file .swcrc",
+    "build:3": "mv ./out/src/* ./out",
+    "build:4": "rm -rf ./out/src",
     "check-all": "run-s fix check-code test",
     "check-code": "run-p dry-run lint spell-check type-check",
     "dev": "run-s build build:watch",
