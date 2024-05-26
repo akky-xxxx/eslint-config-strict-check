@@ -1,6 +1,8 @@
 import { preventAbbreviations } from "./options/preventAbbreviations"
 import { Severity } from "../../../const/Severity"
 
+import type { EslintRules } from "../../../types/EslintRules"
+
 export const unicornRules = {
   rules: {
     "unicorn/consistent-destructuring": Severity.WARN,
@@ -19,4 +21,4 @@ export const unicornRules = {
     "unicorn/prefer-number-properties": Severity.OFF,
     "unicorn/prevent-abbreviations": preventAbbreviations,
   },
-} as const
+} as const satisfies EslintRules

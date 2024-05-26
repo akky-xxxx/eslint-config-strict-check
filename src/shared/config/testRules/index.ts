@@ -3,9 +3,11 @@ import { importRules } from "./importRules"
 import { jestRules } from "./jestRules"
 import { typescriptEslintRules } from "./typescriptEslintRules"
 
+import type { EslintRules } from "../../types/EslintRules"
+
 export const testRules = {
   ...eslintRules,
   ...importRules,
   ...jestRules,
   ...typescriptEslintRules,
-} as const
+} as const satisfies EslintRules

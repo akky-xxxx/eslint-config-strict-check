@@ -1,5 +1,7 @@
 import { Severity } from "../../../const/Severity"
 
+import type { EslintRules } from "../../../types/EslintRules"
+
 export const eslintRules = {
   /* eslint-disable @typescript-eslint/no-magic-numbers */
   "complexity": [Severity.ERROR, 5],
@@ -15,4 +17,4 @@ export const eslintRules = {
   "no-use-before-define": Severity.OFF, // check by typescript-eslint
   "sort-keys": [Severity.WARN, "asc", { allowLineSeparatedGroups: true }],
   /* eslint-enable @typescript-eslint/no-magic-numbers */
-} as const
+} as const satisfies EslintRules

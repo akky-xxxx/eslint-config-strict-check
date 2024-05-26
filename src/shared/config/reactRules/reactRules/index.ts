@@ -4,6 +4,8 @@ import { jsxNoLeakedRender } from "./options/jsxNoLeakedRender"
 import { jsxSortProps } from "./options/jsxSortProps"
 import { Severity } from "../../../const/Severity"
 
+import type { EslintRules } from "../../../types/EslintRules"
+
 export const reactRules = {
   rules: {
     "react/boolean-prop-naming": booleanPropNaming,
@@ -25,4 +27,4 @@ export const reactRules = {
     // prerequisites for using react 17 over
     "react/react-in-jsx-scope": Severity.OFF,
   },
-} as const
+} as const satisfies EslintRules

@@ -6,6 +6,8 @@ import { noUnnecessaryBooleanLiteralCompare } from "./options/noUnnecessaryBoole
 import { noUnnecessaryCondition } from "./options/noUnnecessaryCondition"
 import { Severity } from "../../../const/Severity"
 
+import type { EslintRules } from "../../../types/EslintRules"
+
 export const typescriptEslintRules = {
   rules: {
     "no-magic-numbers": Severity.OFF,
@@ -40,4 +42,4 @@ export const typescriptEslintRules = {
     "@typescript-eslint/prefer-string-starts-ends-with": Severity.WARN,
     "@typescript-eslint/sort-type-constituents": Severity.ERROR,
   },
-} as const
+} as const satisfies EslintRules

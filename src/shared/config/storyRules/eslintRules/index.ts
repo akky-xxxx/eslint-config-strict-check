@@ -1,5 +1,7 @@
 import { Severity } from "../../../const/Severity"
 
+import type { EslintRules } from "../../../types/EslintRules"
+
 export const eslintRules = {
   "complexity": Severity.OFF,
   "max-lines": Severity.OFF,
@@ -9,4 +11,4 @@ export const eslintRules = {
   "no-magic-numbers": Severity.OFF,
   "no-undefined": Severity.OFF,
   "sort-keys": Severity.OFF,
-} as const
+} as const satisfies EslintRules
