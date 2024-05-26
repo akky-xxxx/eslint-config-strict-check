@@ -3,6 +3,6 @@ export const ReactExtends = [
   "plugin:storybook/recommended",
   "plugin:react/jsx-runtime",
   "plugin:react/recommended",
-  "plugin:strict-check/react",
+  "plugin:strict-check/legacy-react",
   "airbnb",
 ] as const
