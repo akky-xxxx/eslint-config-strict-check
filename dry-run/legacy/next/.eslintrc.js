@@ -1,11 +1,12 @@
+const { next } = require("../../../out/legacy/next")
+
 module.exports = {
+  ...next,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ["./tsconfig.react.json"],
+    project: ["./tsconfig.json"],
   },
-  extends: ["./out/next"],
-  ignorePatterns: ["**/libs/**/*", "**/coverage/**", "**/out/**"],
   reportUnusedDisableDirectives: true,
 
   rules: {

@@ -1,0 +1,7 @@
+{
+  "include": ["./*.tsx"],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "rootDir": "."
+  }
+}
