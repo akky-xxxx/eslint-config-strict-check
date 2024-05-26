@@ -1,6 +1,7 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
 import eslintPluginUnicorn from "eslint-plugin-unicorn"
+// eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
 import { baseRules } from "../shared/config/baseRules"
