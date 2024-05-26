@@ -9,6 +9,12 @@ import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
 export const reactMax = {
   extends: [
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:storybook/addon-interactions",
+    "plugin:storybook/csf",
+    "plugin:storybook/csf-strict",
+    "plugin:storybook/recommended",
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:unicorn/recommended",
     "eslint:recommended",
