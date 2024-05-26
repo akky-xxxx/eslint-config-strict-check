@@ -5,9 +5,9 @@ export const order = [
   {
     "newlines-between": "always",
 
-    alphabetize: { order: "asc" },
+    "alphabetize": { order: "asc" },
 
-    groups: [
+    "groups": [
       ["builtin", "external"],
       "internal",
       ["parent", "sibling", "index"],
