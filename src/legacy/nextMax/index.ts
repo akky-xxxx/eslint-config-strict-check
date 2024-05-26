@@ -3,6 +3,7 @@ import { reactRules } from "../../shared/config/reactRules"
 import { reactTestRules } from "../../shared/config/reactTestRules"
 import { storyRules } from "../../shared/config/storyRules"
 import { testRules } from "../../shared/config/testRules"
+import { FilePatterns } from "../../shared/const/FilePatterns"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
@@ -21,14 +22,14 @@ export const nextMax = {
   ],
   overrides: [
     {
-      files: ["**/{spec,test}/**", "**/*.{spec,test}.*"],
+      files: FilePatterns.TEST,
       rules: {
         ...testRules,
         ...reactTestRules,
       },
     },
     {
-      files: ["**/{stories,story}/**", "**/*.{stories,story}.*"],
+      files: FilePatterns.STORY,
       rules: {
         ...storyRules,
       },

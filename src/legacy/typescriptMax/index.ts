@@ -1,5 +1,6 @@
 import { baseRules } from "../../shared/config/baseRules"
 import { testRules } from "../../shared/config/testRules"
+import { FilePatterns } from "../../shared/const/FilePatterns"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
@@ -15,7 +16,7 @@ export const typescriptMax = {
   ],
   overrides: [
     {
-      files: ["**/{spec,test}/**", "**/*.{spec,test}.*"],
+      files: FilePatterns.TEST,
       rules: {
         ...testRules,
       },
