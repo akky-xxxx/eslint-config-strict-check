@@ -1,4 +1,7 @@
+const { typescriptMax } = require("./out/legacy/typescriptMax")
+
 module.exports = {
+  ...typescriptMax,
   root: true,
   env: {
     node: true,
@@ -7,7 +10,6 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.typescript.json"],
   },
-  extends: ["./out/typescriptMax"],
   ignorePatterns: ["**/libs/**/*", "**/coverage/**", "**/out/**"],
   reportUnusedDisableDirectives: true,
 }
