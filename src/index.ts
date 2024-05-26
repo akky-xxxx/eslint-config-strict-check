@@ -11,6 +11,7 @@ const plugin = {
 
   configs: {
     "legacy-react": legacy.react,
+    "legacy-reactMax": legacy.reactMax,
     "legacy-typescript": legacy.typescript,
     "legacy-typescriptMax": legacy.typescriptMax,
     "typescript": typescriptFlatConfig,
