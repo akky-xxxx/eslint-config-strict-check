@@ -8,4 +8,4 @@ export const jsxSortProps = [
     reservedFirst: true,
     shorthandFirst: true,
   },
-]
+] as const

@@ -5,4 +5,4 @@ export const labelHasAssociatedControl = [
   {
     controlComponents: ["StyledTextarea"],
   },
-]
+] as const

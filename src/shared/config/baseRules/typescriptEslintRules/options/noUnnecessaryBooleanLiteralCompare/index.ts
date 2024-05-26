@@ -6,4 +6,4 @@ export const noUnnecessaryBooleanLiteralCompare = [
     allowComparingNullableBooleansToFalse: false,
     allowComparingNullableBooleansToTrue: false,
   },
-]
+] as const

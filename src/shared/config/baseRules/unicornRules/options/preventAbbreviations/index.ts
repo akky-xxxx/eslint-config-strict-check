@@ -14,4 +14,4 @@ export const preventAbbreviations = [
       ].map((keyword) => [keyword, false]),
     ),
   },
-]
+] as const

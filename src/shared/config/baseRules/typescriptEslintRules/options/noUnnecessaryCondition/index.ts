@@ -6,4 +6,4 @@ export const noUnnecessaryCondition = [
     allowConstantLoopConditions: false,
     allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: false,
   },
-]
+] as const

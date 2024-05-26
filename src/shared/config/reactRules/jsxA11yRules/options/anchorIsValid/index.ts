@@ -7,4 +7,4 @@ export const anchorIsValid = [
     components: ["Link"],
     specialLink: ["hrefLeft", "hrefRight"],
   },
-]
+] as const
