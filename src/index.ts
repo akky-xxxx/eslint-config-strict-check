@@ -10,6 +10,7 @@ const plugin = {
   },
 
   configs: {
+    "legacy-next": legacy.next,
     "legacy-react": legacy.react,
     "legacy-reactMax": legacy.reactMax,
     "legacy-typescript": legacy.typescript,
