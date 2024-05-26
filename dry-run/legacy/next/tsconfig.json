@@ -2,6 +2,7 @@
   "include": ["./*.tsx"],
   "compilerOptions": {
     "jsx": "preserve",
-    "rootDir": "."
+    "rootDir": ".",
+    "strictNullChecks": false
   }
 }
