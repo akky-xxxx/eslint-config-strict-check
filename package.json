@@ -31,6 +31,7 @@
     "dry-run:next": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.next.js \"dry-run/next/**/*.{ts,tsx}\"",
     "dry-run:react": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.react.js \"dry-run/react/**/*.{ts,tsx}\"",
     "dry-run:src": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.src.js \"src/**/*.ts\"",
+    "dry-run:typescript": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/typescript/.eslintrc.js \"dry-run/legacy/typescript/**/*.ts\"",
     "dry-run:typescriptMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/typescriptMax/.eslintrc.js \"dry-run/legacy/typescriptMax/**/*.ts\"",
     "fix": "run-p \"fix:*\" -c",
     "fix:eslint": "eslint \"./\" --fix --max-warnings 0",
