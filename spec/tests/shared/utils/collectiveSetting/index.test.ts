@@ -13,7 +13,7 @@ describe("utils/collectiveSetting", () => {
       },
     ],
   ] as const)(
-    'when arguments is "%o", "%s". return "%o"',
+    "when arguments is \"%o\", \"%s\". return \"%o\"",
     (rules, settingValue, expectedValue) => {
       const result = collectiveSetting(rules, settingValue)
       expect(result).toStrictEqual(expectedValue)

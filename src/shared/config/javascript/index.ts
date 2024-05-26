@@ -4,7 +4,7 @@ import { collectiveSetting } from "../../utils/collectiveSetting"
 export = {
   rules: {
     /* eslint-disable @typescript-eslint/no-magic-numbers */
-    complexity: [Severity.ERROR, 5],
+    "complexity": [Severity.ERROR, 5],
     "max-depth": [Severity.ERROR, 3],
     "max-len": Severity.OFF, // fix by prettier
     "max-lines": [Severity.ERROR, { max: 100 }],

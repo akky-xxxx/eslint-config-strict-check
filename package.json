@@ -28,23 +28,19 @@
     "check-code": "run-p dry-run lint spell-check type-check",
     "dev": "run-s build build:watch",
     "dry-run": "npm-run-all -s build -p \"dry-run:*\"",
-    "dry-run:next": "eslint -c .eslintrc.next.js \"dry-run/next/**/*.{ts,tsx}\"",
-    "dry-run:react": "eslint -c .eslintrc.react.js \"dry-run/react/**/*.{ts,tsx}\"",
-    "dry-run:src": "eslint -c .eslintrc.src.js \"src/**/*.ts\"",
-    "dry-run:typescript": "eslint -c .eslintrc.typescript.js \"dry-run/typescript/**/*.ts\"",
+    "dry-run:next": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.next.js \"dry-run/next/**/*.{ts,tsx}\"",
+    "dry-run:react": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.react.js \"dry-run/react/**/*.{ts,tsx}\"",
+    "dry-run:src": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.src.js \"src/**/*.ts\"",
+    "dry-run:typescript": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.typescript.js \"dry-run/typescript/**/*.ts\"",
     "fix": "run-p \"fix:*\" -c",
-    "fix-ts-by-eslint": "eslint \"./{src,spec}/**/*.{ts,tsx}\" --fix --max-warnings 0",
-    "fix-ts-by-prettier": "prettier \"./{src,spec}/**/*.{ts,tsx}\" --write",
-    "fix:config": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --write",
+    "fix:eslint": "eslint \"./\" --fix --max-warnings 0",
+    "fix:json": "prettier \"./*.json\" \"./**/*.json\" !\"./out/**/*\" --write",
     "fix:pack": "fixpack",
-    "fix:ts": "run-s fix-ts-by-prettier fix-ts-by-eslint",
     "lint": "run-p \"lint:*\" -c",
-    "lint-ts-by-eslint": "eslint \"./{src,spec}/**/*.{ts,tsx}\" --max-warnings 0",
-    "lint-ts-by-prettier": "prettier \"./{src,spec}/**/*.{ts,tsx}\" --check",
-    "lint:config": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --check",
     "lint:editorconfig": "editorconfig-checker",
+    "lint:eslint": "eslint \"./\" --max-warnings 0",
+    "lint:json": "prettier \"./*.json\" \"./**/*.json\" !\"./out/**/*\" --check",
     "lint:pack": "fixpack --dryRun",
-    "lint:ts": "run-s lint-ts-by-eslint lint-ts-by-prettier",
     "prepare": "husky install",
     "spell-check": "cspell \"./{src,spec}/**/*.{ts,tsx}\"",
     "tagging": "node ./scripts/tagging/index.js",
@@ -54,6 +50,8 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.3.0",
     "@stylistic/eslint-plugin": "^2.1.0",
     "@swc/cli": "^0.3.12",
     "@swc/core": "^1.5.7",
@@ -84,46 +82,8 @@
     "prettier": "^3.2.5",
     "react": "^18.3.1",
     "shx": "^0.3.4",
-    "typescript": "5.4.5"
-  },
-  "peerDependencies": {
-    "eslint": "9.3.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-next": "14.2.3",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-jest": "28.5.0",
-    "eslint-plugin-react": "7.34.1",
-    "eslint-plugin-react-hooks": "4.6.2",
-    "eslint-plugin-storybook": "0.8.0",
-    "eslint-plugin-strict-check": "0.0.23",
-    "eslint-plugin-unicorn": "53.0.0"
-  },
-  "peerDependenciesMeta": {
-    "eslint-config-airbnb": {
-      "optional": true
-    },
-    "eslint-config-airbnb-base": {
-      "optional": true
-    },
-    "eslint-config-next": {
-      "optional": true
-    },
-    "eslint-plugin-jest": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-storybook": {
-      "optional": true
-    },
-    "eslint-plugin-strict-check": {
-      "optional": true
-    }
+    "typescript": "5.4.5",
+    "typescript-eslint": "^7.10.0"
   },
   "packageManager": "yarn@4.2.2"
 }

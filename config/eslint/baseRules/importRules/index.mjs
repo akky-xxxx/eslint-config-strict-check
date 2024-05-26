@@ -1,7 +1,5 @@
-import { Severity } from "../../../../const/Severity"
-
-export const order = [
-  Severity.ERROR,
+const order = [
+  2,
   {
     "newlines-between": "always",
 
@@ -15,4 +13,11 @@ export const order = [
       "type",
     ],
   },
-] as const
+]
+
+export const importRules = {
+  "import/extensions": [2, { js: "never", ts: "never" }],
+  "import/no-default-export": 2,
+  "import/order": order,
+  "import/prefer-default-export": 0,
+}
