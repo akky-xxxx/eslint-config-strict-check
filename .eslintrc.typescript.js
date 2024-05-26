@@ -7,7 +7,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ["./tsconfig.typescript.json"],
   },
-  extends: ["./out/typescript"],
+  extends: ["./out/typescriptMax"],
   ignorePatterns: ["**/libs/**/*", "**/coverage/**", "**/out/**"],
   reportUnusedDisableDirectives: true,
 }
