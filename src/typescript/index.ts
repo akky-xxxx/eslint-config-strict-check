@@ -1,20 +1,29 @@
-import { Extends } from "../shared/const/Extends"
-import { Plugins } from "../shared/const/Plugins"
-import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
+import { FlatCompat } from "@eslint/eslintrc"
+import eslint from "@eslint/js"
+import eslintPluginUnicorn from "eslint-plugin-unicorn"
+import typescriptEslint from "typescript-eslint"
 
-export = {
-  plugins: Plugins,
+import { baseRules } from "../shared/config/baseRules"
 
-  extends: [
-    ...Extends,
-    "airbnb-base",
-    "prettier",
-    ...[
-      "../shared/config/import",
-      "../shared/config/unicorn",
-      "../shared/config/javascript",
-      "../shared/config/typescript",
-      "../shared/config/stylistic",
-    ].map(getConfigFullPath(__dirname)),
-  ],
-}
+import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
+
+// TODO 問題起きるかも
+const compat = new FlatCompat()
+
+export const typescriptFlatConfig = [
+  ...typescriptEslint.configs.strict,
+  ...typescriptEslint.configs.stylistic,
+  eslint.configs.recommended,
+  ...compat.extends("eslint-config-airbnb-base"), // TODO flat config に対応したら書き換え
+  {
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
+    rules: eslintPluginUnicorn.configs.recommended.rules,
+  },
+  {
+    rules: {
+      ...baseRules,
+    },
+  },
+] as const satisfies EslintFlatConfig[]
