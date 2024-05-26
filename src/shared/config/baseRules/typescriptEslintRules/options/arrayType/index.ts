@@ -1,3 +1,5 @@
 import { Severity } from "../../../../../const/Severity"
 
-export const arrayType = [Severity.ERROR, { default: "array" }] as const
+import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleLevelAndOptions"
+
+export const arrayType = [Severity.ERROR, { default: "array" }] as const satisfies EslintRuleLevelAndOptions

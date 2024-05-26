@@ -1,5 +1,7 @@
 import { Severity } from "../../../../../const/Severity"
 
+import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleLevelAndOptions"
+
 export const anchorIsValid = [
   Severity.ERROR,
   {
@@ -7,4 +9,4 @@ export const anchorIsValid = [
     components: ["Link"],
     specialLink: ["hrefLeft", "hrefRight"],
   },
-] as const
+] as const satisfies EslintRuleLevelAndOptions

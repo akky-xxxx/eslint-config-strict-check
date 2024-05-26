@@ -1,5 +1,7 @@
 import { Severity } from "../../../../../const/Severity"
 
+import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleLevelAndOptions"
+
 export const jsxSortProps = [
   Severity.ERROR,
   {
@@ -8,4 +10,4 @@ export const jsxSortProps = [
     reservedFirst: true,
     shorthandFirst: true,
   },
-] as const
+] as const satisfies EslintRuleLevelAndOptions

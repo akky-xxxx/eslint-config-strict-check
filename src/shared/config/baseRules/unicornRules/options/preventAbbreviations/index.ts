@@ -1,5 +1,7 @@
 import { Severity } from "../../../../../const/Severity"
 
+import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleLevelAndOptions"
+
 export const preventAbbreviations = [
   Severity.ERROR,
   {
@@ -14,4 +16,4 @@ export const preventAbbreviations = [
       ].map((keyword) => [keyword, false]),
     ),
   },
-] as const
+] as const satisfies EslintRuleLevelAndOptions

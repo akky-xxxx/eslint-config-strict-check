@@ -1,5 +1,7 @@
 import { Severity } from "../../../../../const/Severity"
 
+import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleLevelAndOptions"
+
 export const order = [
   Severity.ERROR,
   {
@@ -15,4 +17,4 @@ export const order = [
       "type",
     ],
   },
-] as const
+] as const satisfies EslintRuleLevelAndOptions
