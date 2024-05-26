@@ -12,6 +12,7 @@ export const eslintRules = {
   "no-magic-numbers": Severity.WARN,
   "no-undefined": Severity.WARN,
   "no-unused-vars": Severity.OFF, // check by tsc
+  "no-use-before-define": Severity.OFF, // check by typescript-eslint
   "sort-keys": [Severity.WARN, "asc", { allowLineSeparatedGroups: true }],
   /* eslint-enable @typescript-eslint/no-magic-numbers */
 } as const
