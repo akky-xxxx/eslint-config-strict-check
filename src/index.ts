@@ -11,11 +11,11 @@ const plugin = {
 
   configs: {
     "legacy-next": legacy.next,
-    "legacy-nextMax": legacy.nextMax,
+    "legacy-next-max": legacy.nextMax,
     "legacy-react": legacy.react,
-    "legacy-reactMax": legacy.reactMax,
+    "legacy-react-max": legacy.reactMax,
     "legacy-typescript": legacy.typescript,
-    "legacy-typescriptMax": legacy.typescriptMax,
+    "legacy-typescript-max": legacy.typescriptMax,
     "typescript": typescriptFlatConfig,
     "typescriptMax": typescriptMaxFlatConfig,
   },
