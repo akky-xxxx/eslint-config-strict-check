@@ -8,13 +8,13 @@
 $ yarn add -D eslint-config-strict-check
 ```
 
-### Each to use
+### Each to use for `.eslintrc.js`
 #### Use for TypeScript
 
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check"] // or ["strict-check/typescript"]
+    extends: ["strict-check/legacy"] // or ["strict-check/legacy-typescript"]
 }
 ```
 
@@ -23,7 +23,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/typescript-max"]
+    extends: ["strict-check/legacy-typescript-max"]
 }
 ```
 
@@ -32,7 +32,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/react"]
+    extends: ["strict-check/legacy-react"]
 }
 ```
 
@@ -41,7 +41,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/react-max"]
+    extends: ["strict-check/legacy-react-max"]
 }
 ```
 
@@ -50,7 +50,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/next"]
+    extends: ["strict-check/legacy-next"]
 }
 ```
 
@@ -59,7 +59,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/next-max"]
+    extends: ["strict-check/legacy-next-max"]
 }
 ```
 
