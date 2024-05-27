@@ -1,19 +1,15 @@
-import { baseRules } from "../../shared/config/baseRules"
-import { settings } from "../../shared/config/settings"
 import { testRules } from "../../shared/config/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
+import { typescript } from "../typescript"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
 export const typescriptMax = {
   extends: [
-    "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:jest/recommended",
     "plugin:jest/style",
-    "plugin:unicorn/recommended",
-    "eslint:recommended",
-    "airbnb-base",
-    "prettier",
+    ...typescript.extends,
+
   ],
   overrides: [
     {
@@ -23,11 +19,11 @@ export const typescriptMax = {
       },
     },
   ],
-  plugins: ["@stylistic", "@typescript-eslint", "jest", "unicorn"],
+  plugins: [...typescript.plugins, "jest"],
   rules: {
-    ...baseRules,
+    ...typescript.rules,
   },
   settings: {
-    ...settings,
+    ...typescript.settings,
   },
 } satisfies EslintLegacyConfig
