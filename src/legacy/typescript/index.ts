@@ -1,4 +1,5 @@
 import { baseRules } from "../../shared/config/baseRules"
+import { settings } from "../../shared/config/settings"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
@@ -13,5 +14,8 @@ export const typescript = {
   plugins: ["@stylistic", "@typescript-eslint", "unicorn"],
   rules: {
     ...baseRules,
+  },
+  settings: {
+    ...settings,
   },
 } satisfies EslintLegacyConfig

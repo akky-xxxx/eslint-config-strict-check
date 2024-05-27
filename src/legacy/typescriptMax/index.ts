@@ -1,4 +1,5 @@
 import { baseRules } from "../../shared/config/baseRules"
+import { settings } from "../../shared/config/settings"
 import { testRules } from "../../shared/config/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
 
@@ -25,5 +26,8 @@ export const typescriptMax = {
   plugins: ["@stylistic", "@typescript-eslint", "jest", "unicorn"],
   rules: {
     ...baseRules,
+  },
+  settings: {
+    ...settings,
   },
 } satisfies EslintLegacyConfig
