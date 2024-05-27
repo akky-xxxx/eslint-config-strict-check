@@ -1,30 +1,19 @@
-import { baseRules } from "../../shared/config/baseRules"
 import { reactHooksRules } from "../../shared/config/reactHooksRules"
-import { reactRules } from "../../shared/config/reactRules"
+import { react } from "../react"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
 export const next = {
   extends: [
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:unicorn/recommended",
-    "eslint:recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "plugin:strict-check/legacy-react",
-    "airbnb",
+    // config 内で hooks の plugin 指定されているため、 hooks 関連は除外
+    ...react.extends.filter((configName) => !configName.includes("hooks")),
     "next/core-web-vitals",
   ],
-  plugins: [
-    "@stylistic",
-    "@typescript-eslint",
-    "react",
-    "strict-check",
-    "unicorn",
-  ],
+  plugins:
+    // config 内で hooks の plugin 指定されているため、 hooks 関連は除外
+    react.plugins.filter((configName) => !configName.includes("hooks")),
   rules: {
-    ...baseRules,
-    ...reactRules,
+    ...react.rules,
     ...reactHooksRules,
   },
 } satisfies EslintLegacyConfig
