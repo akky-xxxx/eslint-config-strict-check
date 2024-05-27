@@ -1,6 +1,7 @@
 {
   "include": ["./*.ts"],
   "compilerOptions": {
-    "rootDir": "."
+    "rootDir": ".",
+    "strictNullChecks": true,
   }
 }
