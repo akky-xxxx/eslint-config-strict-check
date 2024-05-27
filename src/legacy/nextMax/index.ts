@@ -45,7 +45,6 @@ export const nextMax = {
     "@typescript-eslint",
     "jest",
     "react",
-    "react-hooks",
     "storybook",
     "strict-check",
     "unicorn",
