@@ -1,10 +1,8 @@
-import { baseRules } from "../../shared/config/baseRules"
-import { reactHooksRules } from "../../shared/config/reactHooksRules"
-import { reactRules } from "../../shared/config/reactRules"
 import { reactTestRules } from "../../shared/config/reactTestRules"
 import { storyRules } from "../../shared/config/storyRules"
 import { testRules } from "../../shared/config/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
+import { next } from "../next"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
@@ -16,14 +14,7 @@ export const nextMax = {
     "plugin:storybook/csf",
     "plugin:storybook/csf-strict",
     "plugin:storybook/recommended",
-    "plugin:@typescript-eslint/recommended-type-checked",
-    "plugin:unicorn/recommended",
-    "eslint:recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react/recommended",
-    "plugin:strict-check/legacy-react",
-    "airbnb",
-    "next/core-web-vitals",
+    ...next.extends,
   ],
   overrides: [
     {
@@ -41,17 +32,11 @@ export const nextMax = {
     },
   ],
   plugins: [
-    "@stylistic",
-    "@typescript-eslint",
+    ...next.plugins,
     "jest",
-    "react",
     "storybook",
-    "strict-check",
-    "unicorn",
   ],
   rules: {
-    ...baseRules,
-    ...reactRules,
-    ...reactHooksRules,
+    ...next.rules,
   },
 } satisfies EslintLegacyConfig
