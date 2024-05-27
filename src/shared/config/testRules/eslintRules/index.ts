@@ -9,6 +9,6 @@ export const eslintRules = {
   "max-statements": Severity.OFF,
   "no-console": Severity.OFF,
   "no-magic-numbers": Severity.OFF,
-  "no-undefined": Severity.OFF,
+  "no-undefined": Severity.OFF, // TODO: baseRules で off にしたら消す
   "sort-keys": Severity.OFF,
 } as const satisfies EslintRules

@@ -9,7 +9,7 @@ export const typescript = {
     "plugin:unicorn/recommended",
     "eslint:recommended",
     "airbnb-base",
-    "prettier",
+    "prettier", // TODO: 消す
   ],
   plugins: ["@stylistic", "@typescript-eslint", "unicorn"],
   rules: {

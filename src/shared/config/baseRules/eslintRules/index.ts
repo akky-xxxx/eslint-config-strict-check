@@ -11,8 +11,8 @@ export const eslintRules = {
   "max-nested-callbacks": [Severity.ERROR, 3],
   "max-statements": [Severity.ERROR, 10],
   "multiline-comment-style": Severity.OFF,
-  "no-magic-numbers": Severity.WARN,
-  "no-undefined": Severity.WARN,
+  "no-magic-numbers": Severity.WARN, // TODO: off にして typescript-eslint に移乗する
+  "no-undefined": Severity.WARN, // TODO: off にする
   "no-unused-vars": Severity.OFF, // check by tsc
   "no-use-before-define": Severity.OFF, // check by typescript-eslint
   "object-curly-newline": Severity.OFF,

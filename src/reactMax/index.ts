@@ -18,7 +18,7 @@ export = {
     ...Extends,
     ...ReactExtends,
     ...ReactHooksExtends,
-    "prettier",
+    "prettier", // TODO: 消す
     ...[
       "../shared/config/import",
       "../shared/config/jest",

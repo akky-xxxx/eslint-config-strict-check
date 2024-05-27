@@ -32,6 +32,7 @@ module.exports = {
   ],
   rules: {
     ...typescript.rules,
+    // TODO: overrides で打ち消す
     "import/no-default-export": 0,
     "unicorn/prevent-abbreviations": [
       2,

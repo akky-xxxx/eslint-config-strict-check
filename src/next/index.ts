@@ -10,7 +10,7 @@ export = {
     ...Extends,
     ...ReactExtends,
     "next/core-web-vitals",
-    "prettier",
+    "prettier", // TODO: 消す
     ...[
       "../shared/config/import",
       "../shared/config/jsx-a11y",

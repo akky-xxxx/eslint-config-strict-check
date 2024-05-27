@@ -5,8 +5,10 @@ import type { EslintRuleLevelAndOptions } from "../../../../../types/EslintRuleL
 export const preventAbbreviations = [
   Severity.ERROR,
   {
+    // TODO: allowList に変更する
     replacements: Object.fromEntries(
       [
+        // TODO: "Prop", "Props" を追加する
         // 許容する略称一覧
         "props",
         "req",
