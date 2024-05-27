@@ -10,6 +10,7 @@ module.exports = {
   reportUnusedDisableDirectives: true,
 
   rules: {
+    ...next.rules,
     // turn off for the dry-run
     "@next/next/no-html-link-for-pages": 0,
   },

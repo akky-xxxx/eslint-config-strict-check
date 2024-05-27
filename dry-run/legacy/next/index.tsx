@@ -33,7 +33,7 @@ type ReactTest1Props = {
 
 export const ReactTest1: FC<ReactTest1Props> = (props) => {
   const { bool, count, empty, title } = props
-  // eslint-disable-next-line strict-check/individual-import
+  // eslint-disable-next-line strict-check/individual-import,@typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call,@typescript-eslint/no-unsafe-assignment
   const state = React.useState("")
   console.log(state)
 
@@ -51,6 +51,7 @@ export const ReactTest1: FC<ReactTest1Props> = (props) => {
     <>
       <div>1</div>
       <div>2</div>
+      {/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment */}
       <button type="button" onClick={onClick}>click</button>
       {/* eslint-disable-next-line react/iframe-missing-sandbox */}
       <iframe
