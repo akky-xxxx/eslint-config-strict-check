@@ -29,6 +29,7 @@
     "dev": "run-s build build:watch",
     "dry-run": "npm-run-all -s build -p \"dry-run:*\"",
     "dry-run:next": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/next/.eslintrc.js \"dry-run/legacy/next/**/*.{ts,tsx}\"",
+    "dry-run:nextMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/nextMax/.eslintrc.js \"dry-run/legacy/nextMax/**/*.{ts,tsx}\"",
     "dry-run:react": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/react/.eslintrc.js \"dry-run/legacy/react/**/*.{ts,tsx}\"",
     "dry-run:reactMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/reactMax/.eslintrc.js \"dry-run/legacy/reactMax/**/*.{ts,tsx}\"",
     "dry-run:src": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.src.js \"src/**/*.ts\"",
