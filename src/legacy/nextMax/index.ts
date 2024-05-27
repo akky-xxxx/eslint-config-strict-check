@@ -1,4 +1,5 @@
 import { baseRules } from "../../shared/config/baseRules"
+import { reactHooksRules } from "../../shared/config/reactHooksRules"
 import { reactRules } from "../../shared/config/reactRules"
 import { reactTestRules } from "../../shared/config/reactTestRules"
 import { storyRules } from "../../shared/config/storyRules"
@@ -22,8 +23,6 @@ export const nextMax = {
     "plugin:react/recommended",
     "plugin:strict-check/legacy-react",
     "airbnb",
-    "plugin:react-hooks/recommended",
-    "airbnb/hooks",
     "next/core-web-vitals",
   ],
   overrides: [
@@ -54,5 +53,6 @@ export const nextMax = {
   rules: {
     ...baseRules,
     ...reactRules,
+    ...reactHooksRules,
   },
 } satisfies EslintLegacyConfig
