@@ -12,6 +12,7 @@ export const eslintRules = {
   "max-statements": [Severity.ERROR, 10],
   "multiline-comment-style": Severity.OFF,
   "no-magic-numbers": Severity.WARN, // TODO: off にして typescript-eslint に移乗する
+  "no-multi-spaces": Severity.OFF, // check by stylistic
   "no-undefined": Severity.WARN, // TODO: off にする
   "no-unused-vars": Severity.OFF, // check by tsc
   "no-use-before-define": Severity.OFF, // check by typescript-eslint
