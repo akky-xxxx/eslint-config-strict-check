@@ -6,6 +6,8 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn"
 import typescriptEslint from "typescript-eslint"
 
 import { baseRules } from "../shared/config/baseRules"
+import { testRules } from "../shared/config/testRules"
+import { FilePatterns } from "../shared/const/FilePatterns"
 
 import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
 
@@ -29,6 +31,12 @@ export const typescriptMaxFlatConfig = [
   {
     rules: {
       ...baseRules,
+    },
+  },
+  {
+    files: FilePatterns.TEST,
+    rules: {
+      ...testRules,
     },
   },
 ] as const satisfies EslintFlatConfig[]

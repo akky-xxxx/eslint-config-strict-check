@@ -7,6 +7,8 @@ import typescriptEslint from "typescript-eslint"
 
 import { baseRules } from "../shared/config/baseRules"
 import { reactRules } from "../shared/config/reactRules"
+import { testRules } from "../shared/config/testRules"
+import { FilePatterns } from "../shared/const/FilePatterns"
 
 import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
 
@@ -36,6 +38,12 @@ export const reactMaxFlatConfig = [
     rules: {
       ...baseRules,
       ...reactRules,
+    },
+  },
+  {
+    files: FilePatterns.TEST,
+    rules: {
+      ...testRules,
     },
   },
 ] as const satisfies EslintFlatConfig[]
