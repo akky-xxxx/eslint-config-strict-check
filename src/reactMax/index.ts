@@ -47,6 +47,12 @@ export const reactMaxFlatConfig = [
       ...testRules,
     },
   },
+  ...compat.extends(
+    "plugin:storybook/addon-interactions",
+    "plugin:storybook/csf",
+    "plugin:storybook/csf-strict",
+    "plugin:storybook/recommended",
+  ),
   {
     files: FilePatterns.STORY,
     rules: {
