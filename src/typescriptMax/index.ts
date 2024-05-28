@@ -1,7 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
 import eslintPluginJest from "eslint-plugin-jest"
-import eslintPluginUnicorn from "eslint-plugin-unicorn"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
@@ -20,14 +19,11 @@ export const typescriptMaxFlatConfig = [
   eslintPluginJest.configs.recommended,
   eslintPluginJest.configs.style,
   eslint.configs.recommended,
-  ...compat.extends("eslint-config-airbnb-base"), // TODO flat config に対応したら書き換え
-  {
-    plugins: {
-      jest: eslintPluginJest,
-      unicorn: eslintPluginUnicorn,
-    },
-    rules: eslintPluginUnicorn.configs.recommended.rules,
-  },
+  // TODO flat config に対応したら書き換え
+  ...compat.extends(
+    "eslint-config-airbnb-base",
+    "plugin:unicorn/recommended",
+  ),
   {
     rules: {
       ...baseRules,

@@ -1,7 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
 import eslintPluginStrictCheck from "eslint-plugin-strict-check"
-import eslintPluginUnicorn from "eslint-plugin-unicorn"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
@@ -19,12 +18,6 @@ export const reactFlatConfig = [
   ...typescriptEslint.configs.strict,
   ...typescriptEslint.configs.stylistic,
   eslint.configs.recommended,
-  {
-    plugins: {
-      unicorn: eslintPluginUnicorn,
-    },
-    rules: eslintPluginUnicorn.configs.recommended.rules,
-  },
   // TODO flat config に対応したら書き換え
   ...compat.extends(
     "plugin:unicorn/recommended",
