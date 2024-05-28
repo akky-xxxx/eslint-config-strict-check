@@ -1,4 +1,8 @@
 import { legacy } from "./legacy"
+import { nextFlatConfig } from "./next"
+import { nextMaxFlatConfig } from "./nextMax"
+import { reactFlatConfig } from "./react"
+import { reactMaxFlatConfig } from "./reactMax"
 import { typescriptFlatConfig } from "./typescript"
 import { typescriptMaxFlatConfig } from "./typescriptMax"
 
@@ -16,6 +20,10 @@ const plugin = {
     "legacy-react-max": legacy.reactMax,
     "legacy-typescript": legacy.typescript,
     "legacy-typescript-max": legacy.typescriptMax,
+    "next": nextFlatConfig,
+    "next-max": nextMaxFlatConfig,
+    "react": reactFlatConfig,
+    "react-max": reactMaxFlatConfig,
     "typescript": typescriptFlatConfig,
     "typescriptMax": typescriptMaxFlatConfig,
   },
