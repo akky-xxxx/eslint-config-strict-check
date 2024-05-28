@@ -1,26 +1,42 @@
-import { Extends } from "../shared/const/Extends"
-import { Plugins } from "../shared/const/Plugins"
-import { ReactExtends } from "../shared/const/ReactExtends"
-import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
+import { FlatCompat } from "@eslint/eslintrc"
+import eslint from "@eslint/js"
+import eslintPluginStrictCheck from "eslint-plugin-strict-check"
+import eslintPluginUnicorn from "eslint-plugin-unicorn"
+// eslint-disable-next-line import/no-unresolved
+import typescriptEslint from "typescript-eslint"
 
-export = {
-  plugins: [...Plugins, "jest", "storybook", "strict-check"],
+import { baseRules } from "../shared/config/baseRules"
+import { reactRules } from "../shared/config/reactRules"
 
-  extends: [
-    ...Extends,
-    ...ReactExtends,
-    "next/core-web-vitals",
-    "prettier", // TODO: 消す
-    ...[
-      "../shared/config/import",
-      "../shared/config/jest",
-      "../shared/config/storybook",
-      "../shared/config/jsx-a11y",
-      "../shared/config/react",
-      "../shared/config/unicorn",
-      "../shared/config/javascript",
-      "../shared/config/typescript",
-      "../shared/config/stylistic",
-    ].map(getConfigFullPath(__dirname)),
-  ],
-}
+import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
+
+// TODO 問題起きるかも
+const compat = new FlatCompat()
+
+export const nextMaxFlatConfig = [
+  ...typescriptEslint.configs.strict,
+  ...typescriptEslint.configs.stylistic,
+  eslint.configs.recommended,
+  {
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
+    rules: eslintPluginUnicorn.configs.recommended.rules,
+  },
+  // TODO flat config に対応したら書き換え
+  ...compat.extends(
+    "plugin:unicorn/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react/recommended",
+    "eslint-config-airbnb",
+    "eslint-config-airbnb/hooks",
+    "eslint-config-next/core-web-vitals",
+  ),
+  ...eslintPluginStrictCheck.configs.react,
+  {
+    rules: {
+      ...baseRules,
+      ...reactRules,
+    },
+  },
+] as const satisfies EslintFlatConfig[]
