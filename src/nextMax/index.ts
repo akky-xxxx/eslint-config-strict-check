@@ -28,7 +28,7 @@ export const nextMaxFlatConfig = [
     "eslint-config-airbnb/hooks",
     "eslint-config-next/core-web-vitals",
   ),
-  ...eslintPluginStrictCheck.configs.react,
+  eslintPluginStrictCheck.configs.react,
   {
     rules: {
       ...baseRules,

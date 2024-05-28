@@ -27,7 +27,7 @@ export const reactMaxFlatConfig = [
     "eslint-config-airbnb",
     "eslint-config-airbnb/hooks",
   ),
-  ...eslintPluginStrictCheck.configs.react,
+  eslintPluginStrictCheck.configs.react,
   {
     rules: {
       ...baseRules,
