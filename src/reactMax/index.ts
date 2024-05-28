@@ -17,7 +17,7 @@ const compat = new FlatCompat()
 
 export const reactMaxFlatConfig = [
   ...typescriptEslint.configs.strict,
-  ...typescriptEslint.configs.stylistic,
+  // ...typescriptEslint.configs.stylistic,
   eslint.configs.recommended,
   // TODO flat config に対応したら書き換え
   ...compat.extends(
