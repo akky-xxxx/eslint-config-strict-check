@@ -143,7 +143,6 @@ export const javascriptObjectTest = {
   one: "one",
 
   five: "five",
-  // eslint-disable-next-line @stylistic/quotes
   four: 'four',
   // eslint-disable-next-line no-undefined
   six: undefined,
