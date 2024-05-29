@@ -25,7 +25,10 @@ export const nextFlatConfig = [
     "plugin:react/recommended",
     "eslint-config-airbnb",
     "eslint-config-airbnb/hooks",
-    "eslint-config-next/core-web-vitals",
+    // TODO: config-next を適用させる
+    //  読み込ませると下記のエラーが出る
+    //  Failed to patch ESLint because the calling module was not recognized.
+    // "eslint-config-next/core-web-vitals",
   ),
   eslintPluginStrictCheck.configs.react,
   {
