@@ -13,7 +13,7 @@ import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
 const compat = new FlatCompat()
 
 export const reactFlatConfig = [
-  ...typescriptEslint.configs.strict,
+  ...typescriptEslint.configs.recommendedTypeChecked,
   // ...typescriptEslint.configs.stylistic,
   eslint.configs.recommended,
   // TODO flat config に対応したら書き換え
