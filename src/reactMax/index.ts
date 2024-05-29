@@ -16,7 +16,7 @@ import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
 const compat = new FlatCompat()
 
 export const reactMaxFlatConfig = [
-  ...typescriptEslint.configs.strict,
+  ...typescriptEslint.configs.recommendedTypeChecked,
   // ...typescriptEslint.configs.stylistic,
   ...compat.extends(
     "plugin:jest/recommended",
