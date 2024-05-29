@@ -4,24 +4,17 @@ import eslintPluginStrictCheck from "eslint-plugin-strict-check"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
-import { baseRules } from "../shared/config/baseRules"
-import { reactRules } from "../shared/config/reactRules"
-import { storyRules } from "../shared/config/storyRules"
-import { testRules } from "../shared/config/testRules"
-import { FilePatterns } from "../shared/const/FilePatterns"
+import { baseRules } from "../../shared/config/baseRules"
+import { reactRules } from "../../shared/config/reactRules"
 
-import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
+import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
 
 // TODO 問題起きるかも
 const compat = new FlatCompat()
 
-export const reactMaxFlatConfig = [
+export const reactFlatConfig = [
   ...typescriptEslint.configs.recommendedTypeChecked,
   // ...typescriptEslint.configs.stylistic,
-  ...compat.extends(
-    "plugin:jest/recommended",
-    "plugin:jest/style",
-  ),
   eslint.configs.recommended,
   // TODO flat config に対応したら書き換え
   ...compat.extends(
@@ -36,24 +29,6 @@ export const reactMaxFlatConfig = [
     rules: {
       ...baseRules,
       ...reactRules,
-    },
-  },
-  {
-    files: FilePatterns.TEST,
-    rules: {
-      ...testRules,
-    },
-  },
-  ...compat.extends(
-    "plugin:storybook/addon-interactions",
-    "plugin:storybook/csf",
-    "plugin:storybook/csf-strict",
-    "plugin:storybook/recommended",
-  ),
-  {
-    files: FilePatterns.STORY,
-    rules: {
-      ...storyRules,
     },
   },
 ] as const satisfies EslintFlatConfig[]

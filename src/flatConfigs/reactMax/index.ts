@@ -4,19 +4,19 @@ import eslintPluginStrictCheck from "eslint-plugin-strict-check"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
-import { baseRules } from "../shared/config/baseRules"
-import { reactRules } from "../shared/config/reactRules"
-import { storyRules } from "../shared/config/storyRules"
-import { testRules } from "../shared/config/testRules"
-import { FilePatterns } from "../shared/const/FilePatterns"
+import { baseRules } from "../../shared/config/baseRules"
+import { reactRules } from "../../shared/config/reactRules"
+import { storyRules } from "../../shared/config/storyRules"
+import { testRules } from "../../shared/config/testRules"
+import { FilePatterns } from "../../shared/const/FilePatterns"
 
-import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
+import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
 
 // TODO 問題起きるかも
 const compat = new FlatCompat()
 
-export const nextMaxFlatConfig = [
-  ...typescriptEslint.configs.strict,
+export const reactMaxFlatConfig = [
+  ...typescriptEslint.configs.recommendedTypeChecked,
   // ...typescriptEslint.configs.stylistic,
   ...compat.extends(
     "plugin:jest/recommended",
@@ -30,10 +30,6 @@ export const nextMaxFlatConfig = [
     "plugin:react/recommended",
     "eslint-config-airbnb",
     "eslint-config-airbnb/hooks",
-    // TODO: config-next を適用させる
-    //  読み込ませると下記のエラーが出る
-    //  Failed to patch ESLint because the calling module was not recognized.
-    // "eslint-config-next/core-web-vitals",
   ),
   eslintPluginStrictCheck.configs.react,
   {

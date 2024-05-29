@@ -1,10 +1,10 @@
 import { legacy } from "./legacy"
-import { nextFlatConfig } from "./next"
-import { nextMaxFlatConfig } from "./nextMax"
-import { reactFlatConfig } from "./react"
-import { reactMaxFlatConfig } from "./reactMax"
-import { typescriptFlatConfig } from "./typescript"
-import { typescriptMaxFlatConfig } from "./typescriptMax"
+import { nextFlatConfig } from "./flatConfigs/next"
+import { nextMaxFlatConfig } from "./flatConfigs/nextMax"
+import { reactFlatConfig } from "./flatConfigs/react"
+import { reactMaxFlatConfig } from "./flatConfigs/reactMax"
+import { typescriptFlatConfig } from "./flatConfigs/typescript"
+import { typescriptMaxFlatConfig } from "./flatConfigs/typescriptMax"
 
 import type { ESLint } from "eslint"
 
