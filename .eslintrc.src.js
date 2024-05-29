@@ -1,7 +1,7 @@
-const { typescript } = require("./out/legacy/typescript")
+const { typescriptMaxLegacyConfig } = require("./out/legacyConfigs/typescriptMaxLegacyConfig")
 
 module.exports = {
-  ...typescript,
+  ...typescriptMaxLegacyConfig,
   root: true,
   env: {
     node: true,
@@ -17,14 +17,7 @@ module.exports = {
   overrides: [
     // eslint-config, eslint-plugin を無理やり import してるため
     {
-      files: [
-        "src/next/index.ts",
-        "src/nextMax/index.ts",
-        "src/react/index.ts",
-        "src/reactMax/index.ts",
-        "src/typescript/index.ts",
-        "src/typescriptMax/index.ts",
-      ],
+      files: ["src/flatConfigs/**/*.ts"],
       rules: Object.fromEntries(
         [
           "@typescript-eslint/no-unsafe-assignment",
@@ -35,7 +28,7 @@ module.exports = {
     },
   ],
   rules: {
-    ...typescript.rules,
+    ...typescriptMaxLegacyConfig.rules,
     // TODO: overrides で打ち消す
     "import/no-default-export": 0,
     "unicorn/prevent-abbreviations": [

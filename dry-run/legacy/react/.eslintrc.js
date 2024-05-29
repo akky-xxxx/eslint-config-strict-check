@@ -1,7 +1,7 @@
-const { react } = require("../../../out/legacy/react")
+const { reactLegacyConfig } = require("../../../out/legacyConfigs/reactLegacyConfig")
 
 module.exports = {
-  ...react,
+  ...reactLegacyConfig,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,

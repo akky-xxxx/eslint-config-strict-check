@@ -1,3 +1,16 @@
+const maxLength = [
+  1,
+  {
+    code: 100,
+    ignoreComments: true,
+    ignoreRegExpLiterals: true,
+    ignoreStrings: true,
+    ignoreTemplateLiterals: true,
+    ignoreTrailingComments: true,
+    ignoreUrls: true,
+  },
+]
+
 const memberDelimiterStyle = [
   2,
   {
@@ -9,6 +22,7 @@ const memberDelimiterStyle = [
     },
   },
 ]
+
 const operatorLinebreak = [
   1,
   "after",
@@ -23,7 +37,7 @@ const operatorLinebreak = [
 export const stylisticRules = {
   "@stylistic/arrow-parens": [2, "always"],
   "@stylistic/brace-style": [2, "1tbs"],
-  "@stylistic/max-len": [1, { code: 100 }],
+  "@stylistic/max-len": maxLength,
   "@stylistic/member-delimiter-style": memberDelimiterStyle,
   "@stylistic/operator-linebreak": operatorLinebreak,
   "@stylistic/quotes": [2, "double"],

@@ -1,7 +1,7 @@
-const { typescript } = require("../../../out/legacy/typescript")
+const { typescriptLegacyConfig } = require("../../../out/legacyConfigs/typescriptLegacyConfig")
 
 module.exports = {
-  ...typescript,
+  ...typescriptLegacyConfig,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,

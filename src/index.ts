@@ -1,10 +1,15 @@
-import { legacy } from "./legacy"
-import { nextFlatConfig } from "./next"
-import { nextMaxFlatConfig } from "./nextMax"
-import { reactFlatConfig } from "./react"
-import { reactMaxFlatConfig } from "./reactMax"
-import { typescriptFlatConfig } from "./typescript"
-import { typescriptMaxFlatConfig } from "./typescriptMax"
+import { nextFlatConfig } from "./flatConfigs/nextFlatConfig"
+import { nextMaxFlatConfig } from "./flatConfigs/nextMaxFlatConfig"
+import { reactFlatConfig } from "./flatConfigs/reactFlatConfig"
+import { reactMaxFlatConfig } from "./flatConfigs/reactMaxFlatConfig"
+import { typescriptFlatConfig } from "./flatConfigs/typescriptFlatConfig"
+import { typescriptMaxFlatConfig } from "./flatConfigs/typescriptMaxFlatConfig"
+import { nextLegacyConfig } from "./legacyConfigs/nextLegacyConfig"
+import { nextMaxLegacyConfig } from "./legacyConfigs/nextMaxLegacyConfig"
+import { reactLegacyConfig } from "./legacyConfigs/reactLegacyConfig"
+import { reactMaxLegacyConfig } from "./legacyConfigs/reactMaxLegacyConfig"
+import { typescriptLegacyConfig } from "./legacyConfigs/typescriptLegacyConfig"
+import { typescriptMaxLegacyConfig } from "./legacyConfigs/typescriptMaxLegacyConfig"
 
 import type { ESLint } from "eslint"
 
@@ -14,12 +19,12 @@ const plugin = {
   },
 
   configs: {
-    "legacy-next": legacy.next,
-    "legacy-next-max": legacy.nextMax,
-    "legacy-react": legacy.react,
-    "legacy-react-max": legacy.reactMax,
-    "legacy-typescript": legacy.typescript,
-    "legacy-typescript-max": legacy.typescriptMax,
+    "legacy-next": nextLegacyConfig,
+    "legacy-next-max": nextMaxLegacyConfig,
+    "legacy-react": reactLegacyConfig,
+    "legacy-react-max": reactMaxLegacyConfig,
+    "legacy-typescript": typescriptLegacyConfig,
+    "legacy-typescript-max": typescriptMaxLegacyConfig,
     "next": nextFlatConfig,
     "nextMax": nextMaxFlatConfig,
     "react": reactFlatConfig,

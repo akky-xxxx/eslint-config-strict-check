@@ -1,7 +1,7 @@
-const { next } = require("../../../out/legacy/next")
+const { nextLegacyConfig } = require("../../../out/legacyConfigs/nextLegacyConfig")
 
 module.exports = {
-  ...next,
+  ...nextLegacyConfig,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
@@ -10,7 +10,7 @@ module.exports = {
   reportUnusedDisableDirectives: true,
 
   rules: {
-    ...next.rules,
+    ...nextLegacyConfig.rules,
     // turn off for the dry-run
     "@next/next/no-html-link-for-pages": 0,
   },
