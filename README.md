@@ -9,6 +9,9 @@ $ yarn add -D eslint-config-strict-check
 ```
 
 ### Each to use for `.eslintrc.js`
+
+<details>
+
 #### Use for TypeScript
 
 ```javascript
@@ -62,6 +65,10 @@ module.exports = {
     extends: ["strict-check/legacy-next-max"]
 }
 ```
+
+### Each to use for `eslint.config.js`
+
+</details>
 
 ## Used config, plugin ( alphabetical )
 ### config
