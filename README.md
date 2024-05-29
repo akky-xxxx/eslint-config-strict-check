@@ -95,7 +95,7 @@ export default [
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/legacy"] // or ["strict-check/legacy-typescript"]
+    extends: ["strict-check"]
 }
 ```
 
