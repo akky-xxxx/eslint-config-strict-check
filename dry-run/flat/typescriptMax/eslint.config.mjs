@@ -8,7 +8,7 @@ export default [
       },
     },
   },
-  ...plugin.default.configs.typescriptMax,
+  ...plugin.configs.typescriptMax,
   {
     files: ["*.ts"],
   },

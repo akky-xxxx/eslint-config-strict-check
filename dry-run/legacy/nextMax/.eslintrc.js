@@ -1,4 +1,4 @@
-const { nextMaxLegacyConfig } = require("../../../out/legacyConfigs/nextMaxLegacyConfig")
+const nextMaxLegacyConfig = require("../../../out/legacy/nextMax")
 
 module.exports = {
   ...nextMaxLegacyConfig,

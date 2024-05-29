@@ -1,4 +1,4 @@
-const { reactLegacyConfig } = require("../../../out/legacyConfigs/reactLegacyConfig")
+const reactLegacyConfig = require("../../../out/legacy/react")
 
 module.exports = {
   ...reactLegacyConfig,

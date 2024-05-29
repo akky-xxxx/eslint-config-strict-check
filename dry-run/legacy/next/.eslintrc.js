@@ -1,4 +1,4 @@
-const { nextLegacyConfig } = require("../../../out/legacyConfigs/nextLegacyConfig")
+const nextLegacyConfig = require("../../../out/legacy/next")
 
 module.exports = {
   ...nextLegacyConfig,

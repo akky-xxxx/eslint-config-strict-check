@@ -1,4 +1,4 @@
-const { reactMaxLegacyConfig } = require("../../../out/legacyConfigs/reactMaxLegacyConfig")
+const reactMaxLegacyConfig = require("../../../out/legacy/reactMax")
 
 module.exports = {
   ...reactMaxLegacyConfig,

@@ -21,7 +21,7 @@ export default [
       },
     },
   },
-  ...plugin.default.configs.typescriptMax,
+  ...plugin.configs.typescriptMax,
   // eslint-config, eslint-plugin を無理やり import してるため
   {
     files: ["src/shared/utils/getCompatExtends/index.ts"],
