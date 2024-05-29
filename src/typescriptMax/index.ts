@@ -1,6 +1,5 @@
 import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
-import eslintPluginJest from "eslint-plugin-jest"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
@@ -16,8 +15,10 @@ const compat = new FlatCompat()
 export const typescriptMaxFlatConfig = [
   ...typescriptEslint.configs.strict,
   // ...typescriptEslint.configs.stylistic,
-  eslintPluginJest.configs.recommended,
-  eslintPluginJest.configs.style,
+  ...compat.extends(
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+  ),
   eslint.configs.recommended,
   // TODO flat config に対応したら書き換え
   ...compat.extends(
