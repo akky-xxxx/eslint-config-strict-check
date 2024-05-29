@@ -54,7 +54,7 @@
     "prepare": "husky install",
     "spell-check": "cspell \"./{src,spec}/**/*.{ts,tsx}\"",
     "tagging": "node ./scripts/tagging/index.js",
-    "test": "jest --coverage",
+    "test": "echo \"replace to `jest --coverage` when exist test file \"",
     "type-check": "tsc"
   },
   "dependencies": {
