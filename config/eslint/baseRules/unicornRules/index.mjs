@@ -4,6 +4,7 @@ const preventAbbreviations = [
     replacements: Object.fromEntries(
       [
         // 許容する略称一覧
+        "prop",
         "props",
         "req",
         "res",

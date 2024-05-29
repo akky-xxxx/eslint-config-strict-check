@@ -8,13 +8,94 @@
 $ yarn add -D eslint-config-strict-check
 ```
 
-### Each to use
+### Each to use for `eslint.config.mjs`
+
+<details>
+
+#### Use for TypeScript
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.typescript,
+]
+```
+
+#### Use for TypeScript with Jest
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.typescriptMax,
+]
+```
+
+#### Use for React with TypeScript
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.react,
+]
+```
+
+#### Use for React with TypeScript, Jest, Storybook
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.reactMax,
+]
+```
+
+#### Use for Next.js with TypeScript
+
+This is the same settings as react config currently.<br>
+Because, have an error when extends eslint-config-next.
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.next,
+]
+```
+
+#### Use for Next.js with TypeScript, Jest, Storybook
+
+This is the same settings as reactMax config currently.<br>
+Because, have an error when extends eslint-config-next.
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.nextMax,
+]
+```
+
+</details>
+
+### Each to use for `.eslintrc.js`
+
+<details>
+
 #### Use for TypeScript
 
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check"] // or ["strict-check/typescript"]
+    extends: ["strict-check"]
 }
 ```
 
@@ -23,7 +104,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/typescript-max"]
+    extends: ["strict-check/legacy-typescript-max"]
 }
 ```
 
@@ -32,7 +113,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/react"]
+    extends: ["strict-check/legacy-react"]
 }
 ```
 
@@ -41,7 +122,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/react-max"]
+    extends: ["strict-check/legacy-react-max"]
 }
 ```
 
@@ -50,7 +131,7 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/next"]
+    extends: ["strict-check/legacy-next"]
 }
 ```
 
@@ -59,9 +140,13 @@ module.exports = {
 ```javascript
 // .eslintrc.js
 module.exports = {
-    extends: ["strict-check/next-max"]
+    extends: ["strict-check/legacy-next-max"]
 }
 ```
+
+### Each to use for `eslint.config.js`
+
+</details>
 
 ## Used config, plugin ( alphabetical )
 ### config

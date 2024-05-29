@@ -1,21 +1,39 @@
-import { Extends } from "../shared/const/Extends"
-import { Plugins } from "../shared/const/Plugins"
-import { getConfigFullPath } from "../shared/utils/getConfigFullPath"
+import { FlatCompat } from "@eslint/eslintrc"
+import eslint from "@eslint/js"
+// eslint-disable-next-line import/no-unresolved
+import typescriptEslint from "typescript-eslint"
 
-export = {
-  plugins: [...Plugins, "jest"],
+import { baseRules } from "../shared/config/baseRules"
+import { testRules } from "../shared/config/testRules"
+import { FilePatterns } from "../shared/const/FilePatterns"
 
-  extends: [
-    ...Extends,
-    "airbnb-base",
-    "prettier",
-    ...[
-      "../shared/config/import",
-      "../shared/config/jest",
-      "../shared/config/unicorn",
-      "../shared/config/javascript",
-      "../shared/config/typescript",
-      "../shared/config/stylistic",
-    ].map(getConfigFullPath(__dirname)),
-  ],
-}
+import type { EslintFlatConfig } from "../shared/types/EslintFlatConfig"
+
+// TODO 問題起きるかも
+const compat = new FlatCompat()
+
+export const typescriptMaxFlatConfig = [
+  ...typescriptEslint.configs.strict,
+  // ...typescriptEslint.configs.stylistic,
+  ...compat.extends(
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+  ),
+  eslint.configs.recommended,
+  // TODO flat config に対応したら書き換え
+  ...compat.extends(
+    "eslint-config-airbnb-base",
+    "plugin:unicorn/recommended",
+  ),
+  {
+    rules: {
+      ...baseRules,
+    },
+  },
+  {
+    files: FilePatterns.TEST,
+    rules: {
+      ...testRules,
+    },
+  },
+] as const satisfies EslintFlatConfig[]
