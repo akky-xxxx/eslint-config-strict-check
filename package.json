@@ -32,7 +32,7 @@
     "dry-run:flat-nextMax": "eslint -c dry-run/flat/nextMax/eslint.config.mjs \"dry-run/flat/nextMax/*.{ts,tsx}\"",
     "dry-run:flat-react": "eslint -c dry-run/flat/react/eslint.config.mjs \"dry-run/flat/react/*.{ts,tsx}\"",
     "dry-run:flat-reactMax": "eslint -c dry-run/flat/reactMax/eslint.config.mjs \"dry-run/flat/reactMax/*.{ts,tsx}\"",
-    "dry-run:flat-src": "eslint -c .eslintrc.src.js \"src\"",
+    "dry-run:flat-src": "eslint -c eslint.config.src.mjs \"./\"",
     "dry-run:flat-typescript": "eslint -c dry-run/flat/typescript/eslint.config.mjs \"dry-run/flat/typescript/*.ts\"",
     "dry-run:flat-typescriptMax": "eslint -c dry-run/flat/typescriptMax/eslint.config.mjs \"dry-run/flat/typescriptMax/*.ts\"",
     "dry-run:legacy-next": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/next/.eslintrc.js \"dry-run/legacy/next/**/*.{ts,tsx}\"",
