@@ -3,7 +3,7 @@ import { settings } from "../../shared/config/settings"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
-export const typescript = {
+export const typescriptLegacyConfig = {
   extends: [
     "plugin:@typescript-eslint/recommended-type-checked",
     "plugin:unicorn/recommended",

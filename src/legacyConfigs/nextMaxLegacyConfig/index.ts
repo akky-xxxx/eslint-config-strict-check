@@ -2,11 +2,11 @@ import { reactTestRules } from "../../shared/config/reactTestRules"
 import { storyRules } from "../../shared/config/storyRules"
 import { testRules } from "../../shared/config/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
-import { react } from "../react"
+import { nextLegacyConfig } from "../nextLegacyConfig"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
-export const reactMax = {
+export const nextMaxLegacyConfig = {
   extends: [
     "plugin:jest/recommended",
     "plugin:jest/style",
@@ -14,7 +14,7 @@ export const reactMax = {
     "plugin:storybook/csf",
     "plugin:storybook/csf-strict",
     "plugin:storybook/recommended",
-    ...react.extends,
+    ...nextLegacyConfig.extends,
   ],
   overrides: [
     {
@@ -32,11 +32,11 @@ export const reactMax = {
     },
   ],
   plugins: [
-    ...react.plugins,
+    ...nextLegacyConfig.plugins,
     "jest",
     "storybook",
   ],
   rules: {
-    ...react.rules,
+    ...nextLegacyConfig.rules,
   },
 } satisfies EslintLegacyConfig

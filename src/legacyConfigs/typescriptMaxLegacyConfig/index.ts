@@ -1,14 +1,14 @@
 import { testRules } from "../../shared/config/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
-import { typescript } from "../typescript"
+import { typescriptLegacyConfig } from "../typescriptLegacyConfig"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
 
-export const typescriptMax = {
+export const typescriptMaxLegacyConfig = {
   extends: [
     "plugin:jest/recommended",
     "plugin:jest/style",
-    ...typescript.extends,
+    ...typescriptLegacyConfig.extends,
 
   ],
   overrides: [
@@ -19,11 +19,11 @@ export const typescriptMax = {
       },
     },
   ],
-  plugins: [...typescript.plugins, "jest"],
+  plugins: [...typescriptLegacyConfig.plugins, "jest"],
   rules: {
-    ...typescript.rules,
+    ...typescriptLegacyConfig.rules,
   },
   settings: {
-    ...typescript.settings,
+    ...typescriptLegacyConfig.settings,
   },
 } satisfies EslintLegacyConfig
