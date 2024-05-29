@@ -17,11 +17,21 @@ module.exports = {
   overrides: [
     // eslint-config, eslint-plugin を無理やり import してるため
     {
-      files: ["src/flatConfigs/**/*.ts"],
+      files: ["src/shared/utils/getCompatExtends/index.ts"],
       rules: Object.fromEntries(
         [
           "@typescript-eslint/no-unsafe-assignment",
           "@typescript-eslint/no-unsafe-call",
+          "@typescript-eslint/no-unsafe-member-access",
+          "@typescript-eslint/no-unsafe-return",
+        ].map((ruleName) => [ruleName, 0]),
+      ),
+    },
+    // eslint-config, eslint-plugin を無理やり import してるため
+    {
+      files: ["src/flatConfigs/**/*.ts"],
+      rules: Object.fromEntries(
+        [
           "@typescript-eslint/no-unsafe-member-access",
         ].map((ruleName) => [ruleName, 0]),
       ),
