@@ -27,7 +27,7 @@
     "check-all": "run-s fix check-code test",
     "check-code": "run-p dry-run lint spell-check type-check",
     "dev": "run-s build build:watch",
-    "dry-run": "npm-run-all -s build -p \"dry-run:*\"",
+    "dry-run": "npm-run-all -s build -p \"dry-run:*\" -c",
     "dry-run:flat-next": "eslint -c dry-run/flat/next/eslint.config.mjs \"dry-run/flat/next/*.{ts,tsx}\"",
     "dry-run:flat-nextMax": "eslint -c dry-run/flat/nextMax/eslint.config.mjs \"dry-run/flat/nextMax/*.{ts,tsx}\"",
     "dry-run:flat-react": "eslint -c dry-run/flat/react/eslint.config.mjs \"dry-run/flat/react/*.{ts,tsx}\"",
