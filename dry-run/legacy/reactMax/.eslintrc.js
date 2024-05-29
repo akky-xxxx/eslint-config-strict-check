@@ -1,7 +1,7 @@
-const { reactMax } = require("../../../out/legacy/reactMax")
+const { reactMaxLegacyConfig } = require("../../../out/legacyConfigs/reactMaxLegacyConfig")
 
 module.exports = {
-  ...reactMax,
+  ...reactMaxLegacyConfig,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,

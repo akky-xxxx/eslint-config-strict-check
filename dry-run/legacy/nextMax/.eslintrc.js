@@ -1,7 +1,7 @@
-const { nextMax } = require("../../../out/legacy/nextMax")
+const { nextMaxLegacyConfig } = require("../../../out/legacyConfigs/nextMaxLegacyConfig")
 
 module.exports = {
-  ...nextMax,
+  ...nextMaxLegacyConfig,
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
@@ -10,7 +10,7 @@ module.exports = {
   reportUnusedDisableDirectives: true,
 
   rules: {
-    ...nextMax.rules,
+    ...nextMaxLegacyConfig.rules,
     // turn off for the dry-run
     "@next/next/no-html-link-for-pages": 0,
   },

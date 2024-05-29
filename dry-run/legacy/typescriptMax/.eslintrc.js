@@ -1,7 +1,7 @@
-const { typescriptMax } = require("../../../out/legacy/typescriptMax")
+const { typescriptMaxLegacyConfig } = require("../../../out/legacyConfigs/typescriptMaxLegacyConfig")
 
 module.exports = {
-  ...typescriptMax,
+  ...typescriptMaxLegacyConfig,
   root: true,
   env: {
     node: true,
