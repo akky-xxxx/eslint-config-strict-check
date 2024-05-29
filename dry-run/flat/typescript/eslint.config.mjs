@@ -4,7 +4,7 @@ export default [
   {
     languageOptions: {
       parserOptions: {
-        project: `${import.meta.dirname}/tsconfig.json`,
+        project: "dry-run/flat/typescript/tsconfig.json",
       },
     },
   },
