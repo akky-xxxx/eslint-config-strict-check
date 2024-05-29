@@ -18,6 +18,10 @@ module.exports = {
     // eslint-config, eslint-plugin を無理やり import してるため
     {
       files: [
+        "src/next/index.ts",
+        "src/nextMax/index.ts",
+        "src/react/index.ts",
+        "src/reactMax/index.ts",
         "src/typescript/index.ts",
         "src/typescriptMax/index.ts",
       ],
