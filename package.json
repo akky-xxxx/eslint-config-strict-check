@@ -10,12 +10,12 @@
   "main": "out/index.js",
   "exports": {
     ".": "./out/index.js",
-    "./next": "./out/next/index.js",
-    "./next-max": "./out/nextMax/index.js",
-    "./react": "./out/react/index.js",
-    "./react-max": "./out/reactMax/index.js",
-    "./typescript": "./out/typescript/index.js",
-    "./typescript-max": "./out/typescriptMax/index.js"
+    "./legacy-next": "./out/legacy/next/index.js",
+    "./legacy-next-max": "./out/legacy/nextMax/index.js",
+    "./legacy-react": "./out/legacy/react/index.js",
+    "./legacy-react-max": "./out/legacy/reactMax/index.js",
+    "./legacy-typescript": "./out/legacy/typescript/index.js",
+    "./legacy-typescript-max": "./out/legacy/typescriptMax/index.js"
   },
   "scripts": {
     "build": "run-s \"build:*\"",

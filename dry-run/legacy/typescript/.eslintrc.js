@@ -1,4 +1,4 @@
-const { typescriptLegacyConfig } = require("../../../out/legacyConfigs/typescriptLegacyConfig")
+const typescriptLegacyConfig = require("../../../out/legacy/typescript")
 
 module.exports = {
   ...typescriptLegacyConfig,

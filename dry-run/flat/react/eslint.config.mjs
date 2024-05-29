@@ -8,7 +8,7 @@ export default [
       },
     },
   },
-  ...plugin.default.configs.react,
+  ...plugin.configs.react,
   {
     files: ["*.ts"],
   },

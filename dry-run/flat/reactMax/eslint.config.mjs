@@ -8,7 +8,7 @@ export default [
       },
     },
   },
-  ...plugin.default.configs.reactMax,
+  ...plugin.configs.reactMax,
   {
     files: ["*.tsx"],
   },

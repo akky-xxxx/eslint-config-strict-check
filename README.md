@@ -19,7 +19,7 @@ $ yarn add -D eslint-config-strict-check
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.typescript,
+    ...eslintConfigStrictCheck.configs.typescript,
 ]
 ```
 
@@ -30,7 +30,7 @@ export default [
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.typescriptMax,
+    ...eslintConfigStrictCheck.configs.typescriptMax,
 ]
 ```
 
@@ -41,7 +41,7 @@ export default [
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.react,
+    ...eslintConfigStrictCheck.configs.react,
 ]
 ```
 
@@ -52,7 +52,7 @@ export default [
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.reactMax,
+    ...eslintConfigStrictCheck.configs.reactMax,
 ]
 ```
 
@@ -66,7 +66,7 @@ Because, have an error when extends eslint-config-next.
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.next,
+    ...eslintConfigStrictCheck.configs.next,
 ]
 ```
 
@@ -80,7 +80,7 @@ Because, have an error when extends eslint-config-next.
 import eslintConfigStrictCheck from "eslint-config-strict-check"
 
 export default [
-    ...eslintConfigStrictCheck.config.nextMax,
+    ...eslintConfigStrictCheck.configs.nextMax,
 ]
 ```
 
