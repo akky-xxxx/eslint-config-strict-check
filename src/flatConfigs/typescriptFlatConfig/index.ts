@@ -1,24 +1,13 @@
-import { FlatCompat } from "@eslint/eslintrc"
-import eslint from "@eslint/js"
-// eslint-disable-next-line import/no-unresolved
-import typescriptEslint from "typescript-eslint"
-
 import { baseRules } from "../../shared/config/rules/baseRules"
+import { FlatConfigForCommon } from "../../shared/const/FlatConfigForCommon"
+import { getCompatExtends } from "../../shared/utils/getCompatExtends"
 
 import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
 
-// TODO 問題起きるかも
-const compat = new FlatCompat()
-
 export const typescriptFlatConfig = [
-  ...typescriptEslint.configs.strict,
-  // ...typescriptEslint.configs.stylistic,
-  eslint.configs.recommended,
-  // TODO flat config に対応したら書き換え
-  ...compat.extends(
-    "eslint-config-airbnb-base",
-    "plugin:unicorn/recommended",
-  ),
+  // extends config
+  ...FlatConfigForCommon,
+  ...getCompatExtends("eslint-config-airbnb-base"),
   {
     rules: {
       ...baseRules,
