@@ -18,6 +18,10 @@ const compat = new FlatCompat()
 export const nextMaxFlatConfig = [
   ...typescriptEslint.configs.strict,
   // ...typescriptEslint.configs.stylistic,
+  ...compat.extends(
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+  ),
   eslint.configs.recommended,
   // TODO flat config に対応したら書き換え
   ...compat.extends(
