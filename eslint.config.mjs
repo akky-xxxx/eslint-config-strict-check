@@ -32,7 +32,14 @@ export default typescriptEslint.config(
   ...compat.extends("eslint-config-airbnb-base"),
   stylistic.configs["recommended-flat"],
   {
-    ignores: ["**/out/**", "**/dry-run/**", "**/coverage/**", "*eslintrc*", ".yarn"],
+    ignores: [
+      "**/coverage/**",
+      "**/dry-run/**",
+      "**/out/**",
+      "*eslintrc*",
+      ".yarn",
+      "eslint.config.src.mjs",
+    ],
   },
   {
     linterOptions: {
