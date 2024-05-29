@@ -1,4 +1,4 @@
-import { reactRules } from "../../shared/config/reactRules"
+import { reactRules } from "../../shared/config/rules/reactRules"
 import { typescriptLegacyConfig } from "../typescriptLegacyConfig"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"

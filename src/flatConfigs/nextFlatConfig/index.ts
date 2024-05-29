@@ -4,9 +4,9 @@ import eslintPluginStrictCheck from "eslint-plugin-strict-check"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
-import { baseRules } from "../../shared/config/baseRules"
-import { reactRules } from "../../shared/config/reactRules"
-import { testRules } from "../../shared/config/testRules"
+import { baseRules } from "../../shared/config/rules/baseRules"
+import { reactRules } from "../../shared/config/rules/reactRules"
+import { testRules } from "../../shared/config/rules/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
 
 import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"

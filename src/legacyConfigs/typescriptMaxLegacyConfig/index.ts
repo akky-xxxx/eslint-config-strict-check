@@ -1,4 +1,4 @@
-import { testRules } from "../../shared/config/testRules"
+import { testRules } from "../../shared/config/rules/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
 import { typescriptLegacyConfig } from "../typescriptLegacyConfig"
 

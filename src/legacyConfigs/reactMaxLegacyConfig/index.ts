@@ -1,6 +1,6 @@
-import { reactTestRules } from "../../shared/config/reactTestRules"
-import { storyRules } from "../../shared/config/storyRules"
-import { testRules } from "../../shared/config/testRules"
+import { reactTestRules } from "../../shared/config/rules/reactTestRules"
+import { storyRules } from "../../shared/config/rules/storyRules"
+import { testRules } from "../../shared/config/rules/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
 import { reactLegacyConfig } from "../reactLegacyConfig"
 

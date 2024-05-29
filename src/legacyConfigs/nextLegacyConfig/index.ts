@@ -1,4 +1,4 @@
-import { reactHooksRules } from "../../shared/config/reactHooksRules"
+import { reactHooksRules } from "../../shared/config/rules/reactHooksRules"
 import { reactLegacyConfig } from "../reactLegacyConfig"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"

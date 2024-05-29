@@ -3,7 +3,7 @@ import eslint from "@eslint/js"
 // eslint-disable-next-line import/no-unresolved
 import typescriptEslint from "typescript-eslint"
 
-import { baseRules } from "../../shared/config/baseRules"
+import { baseRules } from "../../shared/config/rules/baseRules"
 
 import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
 

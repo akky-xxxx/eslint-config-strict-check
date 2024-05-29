@@ -1,4 +1,4 @@
-import { baseRules } from "../../shared/config/baseRules"
+import { baseRules } from "../../shared/config/rules/baseRules"
 import { settings } from "../../shared/config/settings"
 
 import type { EslintLegacyConfig } from "../../shared/types/EslintLegacyConfig"
