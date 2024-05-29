@@ -34,4 +34,4 @@ const plugin = {
   },
 } as const satisfies ESLint.Plugin
 
-export default plugin
+export = plugin
