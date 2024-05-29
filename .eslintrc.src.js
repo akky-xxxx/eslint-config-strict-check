@@ -29,9 +29,13 @@ module.exports = {
     },
     // eslint-config, eslint-plugin を無理やり import してるため
     {
-      files: ["src/flatConfigs/**/*.ts"],
+      files: [
+        "src/shared/const/FlatConfigForCommon/index.ts",
+        "src/shared/const/FlatConfigForReact/index.ts",
+      ],
       rules: Object.fromEntries(
         [
+          "@typescript-eslint/no-unsafe-assignment",
           "@typescript-eslint/no-unsafe-member-access",
         ].map((ruleName) => [ruleName, 0]),
       ),
