@@ -8,6 +8,84 @@
 $ yarn add -D eslint-config-strict-check
 ```
 
+### Each to use for `eslint.config.mjs`
+
+<details>
+
+#### Use for TypeScript
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.typescript,
+]
+```
+
+#### Use for TypeScript with Jest
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.typescriptMax,
+]
+```
+
+#### Use for React with TypeScript
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.react,
+]
+```
+
+#### Use for React with TypeScript, Jest, Storybook
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.reactMax,
+]
+```
+
+#### Use for Next.js with TypeScript
+
+This is the same settings as react config currently.<br>
+Because, have an error when extends eslint-config-next.
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.next,
+]
+```
+
+#### Use for Next.js with TypeScript, Jest, Storybook
+
+This is the same settings as reactMax config currently.<br>
+Because, have an error when extends eslint-config-next.
+
+```javascript
+// eslint.config.mjs
+import eslintConfigStrictCheck from "eslint-config-strict-check"
+
+export default [
+    ...eslintConfigStrictCheck.config.nextMax,
+]
+```
+
+</details>
+
 ### Each to use for `.eslintrc.js`
 
 <details>
