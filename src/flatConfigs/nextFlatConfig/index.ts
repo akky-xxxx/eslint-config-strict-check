@@ -1,4 +1,3 @@
-import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
 import eslintPluginStrictCheck from "eslint-plugin-strict-check"
 // eslint-disable-next-line import/no-unresolved
@@ -8,18 +7,15 @@ import { baseRules } from "../../shared/config/rules/baseRules"
 import { reactRules } from "../../shared/config/rules/reactRules"
 import { testRules } from "../../shared/config/rules/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
+import { getCompatExtends } from "../../shared/utils/getCompatExtends"
 
 import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
-
-// TODO 問題起きるかも
-const compat = new FlatCompat()
 
 export const nextFlatConfig = [
   ...typescriptEslint.configs.strict,
   // ...typescriptEslint.configs.stylistic,
   eslint.configs.recommended,
-  // TODO flat config に対応したら書き換え
-  ...compat.extends(
+  ...getCompatExtends(
     "plugin:unicorn/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",

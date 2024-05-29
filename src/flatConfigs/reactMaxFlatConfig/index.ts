@@ -1,4 +1,3 @@
-import { FlatCompat } from "@eslint/eslintrc"
 import eslint from "@eslint/js"
 import eslintPluginStrictCheck from "eslint-plugin-strict-check"
 // eslint-disable-next-line import/no-unresolved
@@ -9,22 +8,19 @@ import { reactRules } from "../../shared/config/rules/reactRules"
 import { storyRules } from "../../shared/config/rules/storyRules"
 import { testRules } from "../../shared/config/rules/testRules"
 import { FilePatterns } from "../../shared/const/FilePatterns"
+import { getCompatExtends } from "../../shared/utils/getCompatExtends"
 
 import type { EslintFlatConfig } from "../../shared/types/EslintFlatConfig"
-
-// TODO 問題起きるかも
-const compat = new FlatCompat()
 
 export const reactMaxFlatConfig = [
   ...typescriptEslint.configs.recommendedTypeChecked,
   // ...typescriptEslint.configs.stylistic,
-  ...compat.extends(
+  ...getCompatExtends(
     "plugin:jest/recommended",
     "plugin:jest/style",
   ),
   eslint.configs.recommended,
-  // TODO flat config に対応したら書き換え
-  ...compat.extends(
+  ...getCompatExtends(
     "plugin:unicorn/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",
@@ -44,7 +40,7 @@ export const reactMaxFlatConfig = [
       ...testRules,
     },
   },
-  ...compat.extends(
+  ...getCompatExtends(
     "plugin:storybook/addon-interactions",
     "plugin:storybook/csf",
     "plugin:storybook/csf-strict",
