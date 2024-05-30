@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-strict-check",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "repository": {
     "type": "git",
     "url": "https://github.com/akky-xxxx/eslint-config-strict-check.git"
@@ -10,119 +10,92 @@
   "main": "out/index.js",
   "exports": {
     ".": "./out/index.js",
-    "./next": "./out/next/index.js",
-    "./next-max": "./out/nextMax/index.js",
-    "./react": "./out/react/index.js",
-    "./react-max": "./out/reactMax/index.js",
-    "./typescript": "./out/typescript/index.js",
-    "./typescript-max": "./out/typescriptMax/index.js"
+    "./legacy-next": "./out/legacy/next/index.js",
+    "./legacy-next-max": "./out/legacy/nextMax/index.js",
+    "./legacy-react": "./out/legacy/react/index.js",
+    "./legacy-react-max": "./out/legacy/reactMax/index.js",
+    "./legacy-typescript": "./out/legacy/typescript/index.js",
+    "./legacy-typescript-max": "./out/legacy/typescriptMax/index.js"
   },
   "scripts": {
-    "build": "swc \"./src\" -d \"./out\" --config-file .swcrc",
-    "build:watch": "swc \"./src\" -d \"./out\" --config-file .swcrc --watch",
+    "build": "run-s \"build:*\"",
+    "build-watch": "swc \"./src\" -d \"./out\" --config-file .swcrc --watch",
+    "build:1": "rm -rf ./out",
+    "build:2": "swc \"./src\" -d \"./out\" --config-file .swcrc",
+    "build:3": "mv ./out/src/* ./out",
+    "build:4": "rm -rf ./out/src",
     "check-all": "run-s fix check-code test",
     "check-code": "run-p dry-run lint spell-check type-check",
     "dev": "run-s build build:watch",
-    "dry-run": "npm-run-all -s build -p \"dry-run:*\"",
-    "dry-run:next": "eslint -c .eslintrc.next.js \"dry-run/next/**/*.{ts,tsx}\"",
-    "dry-run:react": "eslint -c .eslintrc.react.js \"dry-run/react/**/*.{ts,tsx}\"",
-    "dry-run:src": "eslint -c .eslintrc.src.js \"src/**/*.ts\"",
-    "dry-run:typescript": "eslint -c .eslintrc.typescript.js \"dry-run/typescript/**/*.ts\"",
+    "dry-run": "npm-run-all -s build -p \"dry-run:*\" -c",
+    "dry-run:flat-next": "eslint -c dry-run/flat/next/eslint.config.mjs \"dry-run/flat/next/*.{ts,tsx}\"",
+    "dry-run:flat-nextMax": "eslint -c dry-run/flat/nextMax/eslint.config.mjs \"dry-run/flat/nextMax/*.{ts,tsx}\"",
+    "dry-run:flat-react": "eslint -c dry-run/flat/react/eslint.config.mjs \"dry-run/flat/react/*.{ts,tsx}\"",
+    "dry-run:flat-reactMax": "eslint -c dry-run/flat/reactMax/eslint.config.mjs \"dry-run/flat/reactMax/*.{ts,tsx}\"",
+    "dry-run:flat-src": "eslint -c eslint.config.src.mjs \"./\"",
+    "dry-run:flat-typescript": "eslint -c dry-run/flat/typescript/eslint.config.mjs \"dry-run/flat/typescript/*.ts\"",
+    "dry-run:flat-typescriptMax": "eslint -c dry-run/flat/typescriptMax/eslint.config.mjs \"dry-run/flat/typescriptMax/*.ts\"",
+    "dry-run:legacy-next": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/next/.eslintrc.js \"dry-run/legacy/next/**/*.{ts,tsx}\"",
+    "dry-run:legacy-nextMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/nextMax/.eslintrc.js \"dry-run/legacy/nextMax/**/*.{ts,tsx}\"",
+    "dry-run:legacy-react": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/react/.eslintrc.js \"dry-run/legacy/react/**/*.{ts,tsx}\"",
+    "dry-run:legacy-reactMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/reactMax/.eslintrc.js \"dry-run/legacy/reactMax/**/*.{ts,tsx}\"",
+    "dry-run:legacy-src": "ESLINT_USE_FLAT_CONFIG=false eslint -c .eslintrc.src.js \"src/**/*.ts\"",
+    "dry-run:legacy-typescript": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/typescript/.eslintrc.js \"dry-run/legacy/typescript/**/*.ts\"",
+    "dry-run:legacy-typescriptMax": "ESLINT_USE_FLAT_CONFIG=false eslint -c dry-run/legacy/typescriptMax/.eslintrc.js \"dry-run/legacy/typescriptMax/**/*.ts\"",
     "fix": "run-p \"fix:*\" -c",
-    "fix-ts-by-eslint": "eslint \"./{src,spec}/**/*.{ts,tsx}\" --fix --max-warnings 0",
-    "fix-ts-by-prettier": "prettier \"./{src,spec}/**/*.{ts,tsx}\" --write",
-    "fix:config": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --write",
+    "fix:eslint": "eslint \"./\" --fix --max-warnings 0",
+    "fix:json": "prettier \"./*.json\" \"./**/*.json\" !\"./out/**/*\" --write",
     "fix:pack": "fixpack",
-    "fix:ts": "run-s fix-ts-by-prettier fix-ts-by-eslint",
     "lint": "run-p \"lint:*\" -c",
-    "lint-ts-by-eslint": "eslint \"./{src,spec}/**/*.{ts,tsx}\" --max-warnings 0",
-    "lint-ts-by-prettier": "prettier \"./{src,spec}/**/*.{ts,tsx}\" --check",
-    "lint:config": "prettier \"./*.{js,json}\" \"./**/*.{js,json}\" !\"./out/**/*\" --check",
     "lint:editorconfig": "editorconfig-checker",
+    "lint:eslint": "eslint \"./\" --max-warnings 0",
+    "lint:json": "prettier \"./*.json\" \"./**/*.json\" !\"./out/**/*\" --check",
     "lint:pack": "fixpack --dryRun",
-    "lint:ts": "run-s lint-ts-by-eslint lint-ts-by-prettier",
     "prepare": "husky install",
     "spell-check": "cspell \"./{src,spec}/**/*.{ts,tsx}\"",
     "tagging": "node ./scripts/tagging/index.js",
-    "test": "jest --coverage",
+    "test": "echo \"replace to `jest --coverage` when exist test file \"",
     "type-check": "tsc"
   },
+  "dependencies": {
+    "@eslint/eslintrc": "3.1.0",
+    "@eslint/js": "9.3.0",
+    "eslint-plugin-jest": "28.5.0",
+    "eslint-plugin-react": "7.34.2",
+    "eslint-plugin-react-hooks": "4.6.2",
+    "eslint-plugin-storybook": "0.8.0",
+    "eslint-plugin-strict-check": "0.0.23",
+    "eslint-plugin-unicorn": "53.0.0"
+  },
   "devDependencies": {
-    "@commitlint/cli": "^19.2.1",
-    "@commitlint/config-conventional": "^19.1.0",
-    "@stylistic/eslint-plugin": "^1.7.0",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@stylistic/eslint-plugin": "^2.1.0",
     "@swc/cli": "^0.3.12",
-    "@swc/core": "^1.4.12",
+    "@swc/core": "^1.5.7",
     "@swc/jest": "^0.2.36",
     "@types/jest": "^29.5.12",
-    "@types/node": "20.12.5",
-    "@types/react": "^18.2.74",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@types/node": "20.12.13",
+    "@types/react": "^18.3.3",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
     "chokidar": "^3.6.0",
-    "cspell": "^8.6.1",
+    "cspell": "^8.8.3",
     "editorconfig-checker": "^5.1.5",
-    "eslint": "^8.53.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-next": "^14.1.4",
+    "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-jest": "^28.0.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-storybook": "^0.8.0",
-    "eslint-plugin-strict-check": "^0.0.20",
-    "eslint-plugin-unicorn": "^52.0.0",
     "fixpack": "^4.0.0",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
-    "next": "^14.1.4",
-    "npm-run-all2": "^6.1.2",
+    "next": "^14.2.3",
+    "npm-run-all2": "^6.2.0",
     "prettier": "^3.2.5",
-    "react": "^18.2.0",
+    "react": "^18.3.1",
     "shx": "^0.3.4",
-    "typescript": "5.4.4"
+    "typescript": "5.4.5",
+    "typescript-eslint": "^7.10.0"
   },
-  "peerDependencies": {
-    "eslint": "9.0.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-next": "14.1.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-jest": "28.0.0",
-    "eslint-plugin-react": "7.33.2",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-storybook": "0.6.15",
-    "eslint-plugin-strict-check": "0.0.20",
-    "eslint-plugin-unicorn": "52.0.0"
-  },
-  "peerDependenciesMeta": {
-    "eslint-config-airbnb": {
-      "optional": true
-    },
-    "eslint-config-airbnb-base": {
-      "optional": true
-    },
-    "eslint-config-next": {
-      "optional": true
-    },
-    "eslint-plugin-jest": {
-      "optional": true
-    },
-    "eslint-plugin-react": {
-      "optional": true
-    },
-    "eslint-plugin-react-hooks": {
-      "optional": true
-    },
-    "eslint-plugin-storybook": {
-      "optional": true
-    },
-    "eslint-plugin-strict-check": {
-      "optional": true
-    }
-  },
-  "packageManager": "yarn@4.1.1",
-  "resolutions": {
-    "@swc/cli": "0.1.65"
-  }
+  "packageManager": "yarn@4.2.2"
 }

@@ -1,8 +1,0 @@
-{
-  "extends": "./config/tsconfig/tsconfig.client.json",
-  "include": ["./src/**/*.ts", "./spec/**/*.ts", "./dry-run/**/*.ts"],
-  "exclude": ["node_modules"],
-  "compilerOptions": {
-    "rootDir": "."
-  }
-}
